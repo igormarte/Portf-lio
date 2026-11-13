@@ -147,7 +147,6 @@
                             Desenvolvimento de um projeto de ativação estratégica para uma parceria entre a PUC-Rio e Rio Gastronomia, realizado na disciplina de Mídias Exper e Entretenimento, ministrada pelo professor Marcos Barbato.
                         </p>
                         
-                        <!-- Conteúdo Expansível -->
                         <div id="detalhes-riogastronomia" class="hidden space-y-3 pt-4 border-t border-gray-200 mt-4 text-sm text-gray-600">
                             <p>
                                 O projeto explorou as sinergias entre literatura e entretenimento no contexto de um grande festival gastronômico, propondo ações de ativação de marca (com a Editora ALT, da Globo Livros), experiências imersivas e narrativas voltadas para o engajamento e a atração da Geração Z.
@@ -168,8 +167,121 @@
                 </div>
             </div>
 
-            <!-- Projeto 1: Ignição - Petrobras (Tech & UX) -->
+            <!-- Projeto: Ignição - Petrobras (Tech & UX) -->
             <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
                 <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
                     <img src="Captura de Tela 2026-11-13 às 16.54.10.png" alt="Ignição Petrobras" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <span
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        Tech & UX
+                    </span>
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Ignição - Petrobras</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            O Ignição é um Programa de Inovação Tecnológica promovido pela PUC-Rio que tem por objetivo fomentar a experimentação, desafiando jovens a co-criarem soluções para a transformação digital do setor de óleo e gás.
+                        </p>
+                        
+                        <div id="detalhes-ignicao" class="hidden space-y-4 pt-4 border-t border-gray-200 mt-4 text-sm text-gray-600">
+                            <div>
+                                <strong class="text-gray-900 block mb-1">Desenvolvimento e Inovação Tecnológica:</strong>
+                                <ul class="list-disc list-inside space-y-1 text-gray-500">
+                                    <li>Inteligência Artificial (IA)</li>
+                                    <li>Web 3.0 & Blockchain</li>
+                                    <li>Internet das Coisas (IoT)</li>
+                                    <li>Desenvolvimento de soluções digitais</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-gray-900 block mb-1">Design e Experiência do Usuário:</strong>
+                                <ul class="list-disc list-inside space-y-1 text-gray-500">
+                                    <li>Web Design e Experiência do Usuário (UX)</li>
+                                    <li>Estruturação de interfaces e prototipagem</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-gray-900 block mb-1">Gestão:</strong>
+                                <ul class="list-disc list-inside space-y-1 text-gray-500">
+                                    <li>Metodologias Ágeis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6 mt-4 border-t border-gray-200">
+                        <button onclick="toggleProjeto('detalhes-ignicao', this)" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                            <span>Ver detalhes</span>
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto: Mulher de Favela (Audiovisual) -->
+            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="audiovisual">
+                <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
+                    <img src="image_a88b1a.jpg" alt="Mulher de Favela Audiolivro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        Audiovisual
+                    </span>
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Mulher de Favela (Audiolivro)</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Mulher de Favela é um projeto que registra em audiolivro as histórias de 30 lideranças mulheres de favelas e periferias do estado do Rio de Janeiro. Produzido pela PUC-Rio, as entrevistas destacam o protagonismo, a resistência e o saber local dessas mulheres, promovendo a memória oral como ferramenta de transformação social. <strong>Atuei em equipe técnica de captação de áudio, utilizando o Reaper.</strong>
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-4 border-t border-gray-200">
+                        <a href="https://open.spotify.com/show/13S81yMAMtQmT61GnBgmZG?si=722407ccb0a145d3" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline">
+                            Ouvir no Spotify 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Currículo & Habilidades -->
+    <section id="curriculo" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
+            <h2 class="text-3xl font-black tracking-tight">Currículo & Habilidades</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <!-- Coluna Esquerda: Experiência & Formação -->
+            <div class="lg:col-span-7 space-y-16">
+                
+                <!-- Experiência -->
+                <div>
+                    <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Experiência Profissional</h3>
+                    <div class="space-y-12">
+                        
+                        <!-- Item 1: Ignição Petrobras -->
+                        <div class="border-l-2 border-gray-200 pl-6 relative">
+                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#0055FF]"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-lg font-bold">Estágio | Programa Ignição Petrobras</h4>
+                                <span class="text-sm font-medium text-gray-400">Mar 2026 – Atual</span>
+                            </div>
+                            <p class="text-sm font-semibold text-[#0055FF] mb-3">Instituto ECOA PUC-Rio</p>
+                            <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                                <li>Desenvolvo soluções em projetos de P&D em times multidisciplinares no contexto de inovação tecnológica.</li>
+                                <li>Atuo na frente de design, com foco em web design e experiência do usuário (UX).</li>
+                                <li>Estruturo interfaces e contribuo para a construção de soluções digitais.</li>
+                                <li>Colaboro com as frentes de programação e organização no desenvolvimento dos projetos.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Item 2: LABCOM PUC-Rio -->
+                        <div class="border-l-2 border-gray-200 pl-6 relative">
+                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-300"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-lg font-bold">Estagiário Técnico</h4>
+                                <span class="text-sm font-medium text-gray-400">Fev 2025 – Fev 2026</span>
+                            </div>
+                            <p class="text-sm font-semibold text-[#0055FF] mb-3">PUC-Rio LABCOM (Estúdios de Áudio e TV)</p>
+                            <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside
