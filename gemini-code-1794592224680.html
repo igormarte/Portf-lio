@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor Martins | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Ocultar barra de rolagem nos filtros (mobile) */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased selection:bg-[#0055FF] selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="w-full p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="font-black text-xl tracking-tighter">IGOR.</div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+            <a href="#sobre" class="hover:text-[#0055FF] transition-colors">Sobre</a>
+            <a href="#toolkit" class="hover:text-[#0055FF] transition-colors">Toolkit</a>
+            <a href="#projetos" class="hover:text-[#0055FF] transition-colors">Projetos</a>
+        </div>
+        <a href="#contato" class="bg-[#0055FF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
+            Falar comigo
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
+            Comunicação, <span class="text-[#0055FF]">Tecnologia</span><br>
+            e Estratégia Criativa.
+        </h1>
+        <p class="text-xl text-gray-500 max-w-2xl mb-10 leading-relaxed">
+            Construindo pontes entre o desenvolvimento de produtos digitais, a direção de arte e o audiovisual para criar experiências que fazem sentido (e dão resultado).
+        </p>
+    </header>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <!-- Placeholder para a Foto -->
+            <div class="md:col-span-5 h-[500px] bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 relative group">
+                <!-- SUBSTITUA "sua-foto.jpg" PELO NOME DA SUA IMAGEM -->
+                <img src="https://placehold.co/600x800/e2e8f0/94a3b8?text=Sua+Foto+Aqui" alt="Igor Martins" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+            </div>
+            
+            <!-- Texto Sobre -->
+            <div class="md:col-span-7">
+                <h2 class="text-3xl font-black mb-6 tracking-tight">Muito prazer, Igor.</h2>
+                <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                    <p>
+                        Sou um profissional de 22 anos focado em resolver problemas através de múltiplas lentes. Atualmente estudo <strong>Estudos de Mídia na PUC-Rio</strong>, onde encontrei o ecossistema perfeito para misturar as minhas principais paixões: a Publicidade, o Audiovisual e a Inovação Tecnológica.
+                    </p>
+                    <p>
+                        Com uma mentalidade de "explorador", eu não gosto de ficar preso a uma única gaveta. Posso estruturar o UX/UI de uma plataforma baseada em Inteligência Artificial, operar captação de áudio e vídeo em estúdio, ou pensar estrategicamente em uma campanha ou pitch de apresentação com a mesma energia.
+                    </p>
+                    <p>
+                        Acredito na iteração rápida e no pragmatismo criativo: ideias boas são aquelas que saem do papel, funcionam bem de ponta a ponta e conversam de verdade com as pessoas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toolkit & Mindset -->
+    <section id="toolkit" class="bg-gray-50 py-24 mt-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2
