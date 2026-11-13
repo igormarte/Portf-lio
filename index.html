@@ -129,24 +129,24 @@
         </div>
         
         <!-- Grid de Projetos -->
-        <div id="grid-projetos" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div id="grid-projetos" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             
-            <!-- Projeto 1: Ignição - Petrobras (Tech & UX com Expansión Contínua) -->
+            <!-- Projeto 1: Ignição - Petrobras -->
             <div class="bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="h-64 bg-gray-200 overflow-hidden relative">
-                        <img src="Captura de Tela 2026-11-13 às 16.54.10.png" alt="Ignição Petrobras" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                            Tech & UX
-                        </span>
-                    </div>
-                    <div class="p-8">
+                <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
+                    <img src="Captura de Tela 2026-11-13 às 16.54.10.png" alt="Ignição Petrobras" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        Tech & UX
+                    </span>
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
                         <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Ignição - Petrobras</h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
                             Programa de Inovação Tecnológica promovido pela PUC-Rio que tem por objetivo fomentar a experimentação, desafiando jovens a co-criarem soluções para a transformação digital do setor de óleo e gás.
                         </p>
                         
-                        <!-- Conteúdo que continua perfeitamente logo abaixo ao clicar -->
+                        <!-- Conteúdo Expansível -->
                         <div id="detalhes-ignicao" class="hidden space-y-4 pt-2 text-sm text-gray-600">
                             <div>
                                 <strong class="text-gray-900 block mb-1">Desenvolvimento e Inovação Tecnológica:</strong>
@@ -172,38 +172,37 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="px-8 pb-8 pt-0">
-                    <button onclick="toggleProjeto('detalhes-ignicao', this)" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
-                        <span>Ver detalhes</span>
-                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
+                    
+                    <div class="pt-6 mt-4 border-t border-gray-200">
+                        <button onclick="toggleProjeto('detalhes-ignicao', this)" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                            <span>Ver detalhes</span>
+                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Projeto 2: Mulher de Favela (Audiovisual) -->
+            <!-- Projeto 2: Mulher de Favela -->
             <div class="bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="h-64 bg-gray-200 overflow-hidden relative">
-                        <!-- Capa do Projeto -->
-                        <img src="image_a88b1a.jpg" alt="Mulher de Favela Audiolivro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                            Audiovisual
-                        </span>
-                    </div>
-                    <div class="p-8">
+                <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
+                    <img src="image_a88b1a.jpg" alt="Mulher de Favela Audiolivro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        Audiovisual
+                    </span>
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
                         <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Mulher de Favela (Audiolivro)</h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
                             Mulher de Favela é um projeto que registra em audiolivro as histórias de 30 lideranças mulheres de favelas e periferias do estado do Rio de Janeiro. Produzido pela PUC-Rio, as entrevistas destacam o protagonismo, a resistência e o saber local dessas mulheres, promovendo a memória oral como ferramenta de transformação social. <strong>Atuei em equipe técnica de captação de áudio, utilizando o Reaper.</strong>
                         </p>
                     </div>
-                </div>
-                <div class="px-8 pb-8 pt-0">
-                    <a href="https://open.spotify.com/show/13S81yMAMtQmT61GnBgmZG?si=722407ccb0a145d3" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline">
-                        Ouvir no Spotify 
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
+                    <div class="pt-6 mt-4 border-t border-gray-200">
+                        <a href="https://open.spotify.com/show/13S81yMAMtQmT61GnBgmZG?si=722407ccb0a145d3" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline">
+                            Ouvir no Spotify 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -219,4 +218,29 @@
             </div>
             <div class="flex gap-6">
                 <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">LinkedIn</a>
-                <a href="
+                <a href="https://www.instagram.com/igormarte" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">Instagram</a>
+                <a href="mailto:igormartinspuc@gmail.com" class="hover:text-[#0055FF] transition-colors font-medium">E-mail</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para gerenciar a expansão dos detalhes dos projetos -->
+    <script>
+        function toggleProjeto(id, btn) {
+            const el = document.getElementById(id);
+            const textSpan = btn.querySelector('span');
+            const svg = btn.querySelector('svg');
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                textSpan.textContent = 'Recolher';
+                svg.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                textSpan.textContent = 'Ver detalhes';
+                svg.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
