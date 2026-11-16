@@ -274,8 +274,8 @@
             <!-- Projeto: As Crônicas de Nárnia (Audiovisual com Player Nativo) -->
             <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="audiovisual">
                 <div class="h-80 bg-gray-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center p-4">
-                    <!-- Imagem vertical da capa de Nárnia -->
-                    <img src="narnia_capa.jpg" alt="As Crônicas de Nárnia - Capítulo 1" class="h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition duration-500">
+                    <!-- Dica: Renomeie a imagem da capa para narnia.jpg na raiz -->
+                    <img src="narnia.jpg" alt="As Crônicas de Nárnia - Capítulo 1" class="h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition duration-500">
                     <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                         Audiovisual
                     </span>
@@ -291,7 +291,8 @@
                         <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm mt-4">
                             <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider block mb-2 text-center">Ouça o Capítulo Narrado</span>
                             <audio controls class="w-full">
-                                <source src="Histórias em Áudio - Nárnia (cap.1).mp3" type="audio/mpeg">
+                                <!-- Dica: Renomeie o arquivo de áudio para narnia.mp3 na raiz para evitar erro de caracteres especiais -->
+                                <source src="narnia.mp3" type="audio/mpeg">
                                 Seu navegador não suporta o elemento de áudio.
                             </audio>
                         </div>
