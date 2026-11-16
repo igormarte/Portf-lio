@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,302 +12,490 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-white text-gray-900 antialiased selection:bg-[#0055FF] selection:text-white">
+<body class="bg-white text-gray-900 antialiased selection:bg-[#0055FF] selection:text-white flex flex-col md:flex-row min-h-screen">
 
-    <!-- Navbar -->
-    <nav class="w-full p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="font-black text-xl tracking-tighter">IGOR.</div>
-        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
-            <a href="#sobre" class="hover:text-[#0055FF] transition-colors">Sobre mim</a>
-            <a href="#projetos" class="hover:text-[#0055FF] transition-colors">Projetos</a>
-            <a href="#curriculo" class="hover:text-[#0055FF] transition-colors">Currículo</a>
+    <!-- Sidebar Esquerda (Fixa no Desktop) -->
+    <aside class="w-full md:w-72 bg-white md:fixed md:top-0 md:left-0 md:h-screen border-b md:border-b-0 md:border-r border-gray-100 p-8 flex flex-col justify-between z-40">
+        <div>
+            <!-- Logo / Nome -->
+            <a href="#" class="block mb-12">
+                <span class="font-black text-2xl tracking-tighter">IGOR.</span>
+                <span class="block text-xs text-gray-400 uppercase tracking-widest mt-1">Estudos de Mídia</span>
+            </a>
+
+            <!-- Navegação Vertical -->
+            <nav class="space-y-4 hidden md:block">
+                <a href="#topo" class="block text-sm font-semibold text-gray-900 hover:text-[#0055FF] transition-colors">Início</a>
+                <a href="#sobre" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Sobre mim</a>
+                <a href="#projetos" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Projetos</a>
+                <a href="#curriculo" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Currículo</a>
+                <a href="#contato" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Contato</a>
+            </nav>
         </div>
-        <a href="#contato" class="bg-[#0055FF] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
-            Falar comigo
-        </a>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="max-w-6xl mx-auto px-6 py-20 md:py-28">
-        <h1 class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tight">
-            Entre telas, sons e estratégias:
-        </h1>
-        <h1 class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tight mt-4 mb-6">
-            <span class="text-[#0055FF] italic">meu jeito de dar vida às ideias.</span>
-        </h1>
-        <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">
-            Estudante de Estudos de Mídia na PUC-Rio, unindo a publicidade, design, audiovisual e tecnologia para construir narrativas que conectam de verdade.
-        </p>
-    </header>
+        <!-- Links Sociais na Base da Sidebar -->
+        <div class="hidden md:flex flex-col space-y-2 pt-6 border-t border-gray-100">
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Redes</span>
+            <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="text-xs font-medium text-gray-600 hover:text-[#0055FF] transition-colors">LinkedIn ↗</a>
+            <a href="https://www.instagram.com/igormarte" target="_blank" class="text-xs font-medium text-gray-600 hover:text-[#0055FF] transition-colors">Instagram ↗</a>
+            <a href="mailto:igormartinspuc@gmail.com" class="text-xs font-medium text-gray-600 hover:text-[#0055FF] transition-colors">E-mail ↗</a>
+        </div>
 
-    <!-- Sobre Mim -->
-    <section id="sobre" class="max-w-6xl mx-auto px-6 py-16 border-t border-gray-100">
-        <h2 class="text-3xl font-black mb-12 tracking-tight">Sobre mim</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+        <!-- Botão Mobile para Contato -->
+        <div class="md:hidden flex justify-between items-center">
+            <div class="flex gap-4 text-xs font-semibold text-gray-600">
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#curriculo">Currículo</a>
+            </div>
+            <a href="#contato" class="bg-[#0055FF] text-white px-4 py-1.5 rounded-full text-xs font-medium">Contato</a>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal (Com margem esquerda no desktop para acomodar a sidebar) -->
+    <main class="flex-1 md:ml-72 w-full">
+
+        <!-- Hero Section -->
+        <header id="topo" class="max-w-4xl mx-auto px-8 py-20 md:py-28">
+            <h1 class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tight">
+                Entre telas, sons e estratégias:
+            </h1>
+            <h1 class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tight mt-4 mb-6">
+                <span class="text-[#0055FF] italic">meu jeito de dar vida às ideias.</span>
+            </h1>
+            <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">
+                Estudante de Estudos de Mídia na PUC-Rio, unindo a publicidade, design, audiovisual e tecnologia para construir narrativas que conectam de verdade.
+            </p>
+        </header>
+
+        <!-- Sobre Mim -->
+        <section id="sobre" class="max-w-4xl mx-auto px-8 py-16 border-t border-gray-100">
+            <h2 class="text-3xl font-black mb-12 tracking-tight">Sobre mim</h2>
             
-            <!-- Coluna Esquerda: Foto + Texto Bio -->
-            <div class="md:col-span-6 space-y-8">
-                <div class="h-[480px] bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 relative group">
-                    <img src="Igor Foto.jpeg" alt="Igor Martins" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
                 
-                <div class="space-y-4 text-gray-600 text-base leading-relaxed">
-                    <p>
-                        Sou <strong>Igor Martins</strong>, estudante de Estudos de Mídia na PUC-Rio, com ênfases em Publicidade e Comunicação Corporativa & Comunicação e Tecnologia, unindo a publicidade, o design, o audiovisual e a tecnologia para construir narrativas que conectam de verdade, usando a criatividade para transformar conceitos e ideias em projetos práticos e de alto impacto.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Coluna Direita: Informações em Blocos -->
-            <div class="md:col-span-6 space-y-6 pt-2">
-                
-                <!-- Bloco Localização -->
-                <div class="border-b border-gray-200 pb-6">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">Localização</span>
-                    <p class="text-gray-900 font-medium">Rio de Janeiro, Brasil</p>
-                </div>
-
-                <!-- Bloco Especialidades -->
-                <div class="border-b border-gray-200 pb-6">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-2">Especialidades</span>
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Direção de Arte & Branding • Estratégia de Conteúdo • UX/UI & Web Design • Produção Audiovisual & Sound Design • Inovação Digital & P&D
-                    </p>
-                </div>
-
-                <!-- Bloco Idiomas -->
-                <div class="border-b border-gray-200 pb-6">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">Idiomas</span>
-                    <p class="text-gray-900 font-medium">Português • Inglês • Espanhol</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Projetos -->
-    <section id="projetos" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100">
-        
-        <!-- Header e Filtros -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
-            <h2 class="text-3xl font-black tracking-tight">Projetos Selecionados:</h2>
-            
-            <div class="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar">
-                <button onclick="filtrarProjetos('todos')" id="btn-todos" class="px-5 py-2 rounded-full text-sm font-semibold bg-[#0055FF] text-white whitespace-nowrap transition-colors">
-                    Todos
-                </button>
-                <button onclick="filtrarProjetos('publicidade')" id="btn-publicidade" class="px-5 py-2 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-colors">
-                    Publicidade
-                </button>
-                <button onclick="filtrarProjetos('tech')" id="btn-tech" class="px-5 py-2 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-colors">
-                    Tech & UX
-                </button>
-                <button onclick="filtrarProjetos('audiovisual')" id="btn-audiovisual" class="px-5 py-2 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-colors">
-                    Audiovisual
-                </button>
-            </div>
-        </div>
-        
-        <!-- Grid de Projetos -->
-        <div id="grid-projetos" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            
-            <!-- Projeto: Manô (Publicidade) -->
-            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="publicidade">
-                <div class="h-64 bg-[#FFF9E6] overflow-hidden relative flex-shrink-0 flex items-center justify-center p-4">
-                    <img src="PIZZA MANO.png" alt="Manô Identidade Visual" class="w-full h-full object-contain group-hover:scale-105 transition duration-500 rounded-2xl">
-                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Publicidade
-                    </span>
-                </div>
-                <div class="p-8 flex flex-col justify-between flex-grow">
-                    <div>
-                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Manô | Identidade Visual & Branding</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Criação de identidade visual para loja de alimentação com o conceito <em>“Ingredientes orgânicos, para comer com as mãos”</em>. Desenvolvido a partir de desenhos manuais vetorizados no Adobe Illustrator, sob orientação do professor <strong>Diogo Maduell</strong>.
-                        </p>
+                <!-- Coluna Esquerda: Foto + Texto Bio -->
+                <div class="md:col-span-6 space-y-8">
+                    <div class="h-[480px] bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 relative group">
+                        <img src="Igor Foto.jpeg" alt="Igor Martins" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                     
-                    <div class="pt-6 mt-4 border-t border-gray-200">
-                        <button onclick="abrirModalMano()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
-                            <span>Ver apresentação</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </button>
+                    <div class="space-y-4 text-gray-600 text-base leading-relaxed">
+                        <p>
+                            Sou <strong>Igor Martins</strong>, estudante de Estudos de Mídia na PUC-Rio, com ênfases em Publicidade e Comunicação Corporativa & Comunicação e Tecnologia, unindo a publicidade, o design, o audiovisual e a tecnologia para construir narrativas que conectam de verdade, usando a criatividade para transformar conceitos e ideias em projetos práticos e de alto impacto.
+                        </p>
                     </div>
                 </div>
-            </div>
+                
+                <!-- Coluna Direita: Informações em Blocos -->
+                <div class="md:col-span-6 space-y-6 pt-2">
+                    
+                    <!-- Bloco Localização -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">Localização</span>
+                        <p class="text-gray-900 font-medium">Rio de Janeiro, Brasil</p>
+                    </div>
 
-            <!-- Projeto: PUCmon (Tech & UX) -->
-            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
-                <div class="h-64 bg-blue-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center">
-                    <img src="Captura de Tela 2026-11-16 às 14.28.35.png" alt="PUCmon Capa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                    <!-- Bloco Especialidades -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-2">Especialidades</span>
+                        <p class="text-gray-800 text-sm leading-relaxed">
+                            Direção de Arte & Branding • Estratégia de Conteúdo • UX/UI & Web Design • Produção Audiovisual & Sound Design • Inovação Digital & P&D
+                        </p>
+                    </div>
+
+                    <!-- Bloco Idiomas -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">Idiomas</span>
+                        <p class="text-gray-900 font-medium">Português • Inglês • Espanhol</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="max-w-4xl mx-auto px-8 py-24 border-t border-gray-100">
+            
+            <!-- Header e Filtros -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+                <h2 class="text-3xl font-black tracking-tight">Projetos Selecionados:</h2>
+                
+                <div class="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar">
+                    <button onclick="filtrarProjetos('todos')" id="btn-todos" class="px-5 py-2 rounded-full text-sm font-semibold bg-[#0055FF] text-white whitespace-nowrap transition-colors">
+                        Todos
+                    </button>
+                    <button onclick="filtrarProjetos('publicidade')" id="btn-publicidade" class="px-5 py-2 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-colors">
+                        Publicidade
+                    </button>
+                    <button onclick="filtrarProjetos('tech')" id="btn-tech" class="px-5 py-2 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-colors">
                         Tech & UX
-                    </span>
-                </div>
-                <div class="p-8 flex flex-col justify-between flex-grow">
-                    <div>
-                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">PUCmon | Jogo em Realidade Aumentada</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Conceito de jogo em AR centrado na captura dinâmica de criaturas por arremesso de pedras e evolução estilo <em>Tamagotchi</em> baseada em afinidade.
-                        </p>
-                    </div>
-                    
-                    <div class="pt-6 mt-4 border-t border-gray-200">
-                        <button onclick="abrirModalPucmon()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
-                            <span>Ver apresentação</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </button>
-                    </div>
+                    </button>
+                    <button onclick="filtrarProjetos('audiovisual')" id="btn-audiovisual" class="px-5 py-2 rounded-full text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-colors">
+                        Audiovisual
+                    </button>
                 </div>
             </div>
-
-            <!-- Projeto: Rio Gastronomia (Publicidade) -->
-            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="publicidade">
-                <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
-                    <img src="Captura de Tela 2026-11-13 às 17.36.28.jpg" alt="Rio Gastronomia - Sabores que contam histórias" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Publicidade
-                    </span>
-                </div>
-                <div class="p-8 flex flex-col justify-between flex-grow">
-                    <div>
-                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Rio Gastronomia - Sabores que contam histórias</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Desenvolvimento de um projeto de ativação estratégica para uma parceria entre a PUC-Rio e Rio Gastronomia, realizado na disciplina de Mídias Exper e Entretenimento, ministrada pelo professor Marcos Barbato.
-                        </p>
-                        
-                        <div id="detalhes-riogastronomia" class="hidden space-y-3 pt-4 border-t border-gray-200 mt-4 text-sm text-gray-600">
-                            <p>
-                                O projeto explorou as sinergias entre literatura e entretenimento no contexto de um grande festival gastronômico, proponando ações de ativação de marca (com a Editora ALT, da Globo Livros), experiências imersivas e narrativas voltadas para o engajamento e a atração da Geração Z.
+            
+            <!-- Grid de Projetos -->
+            <div id="grid-projetos" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                
+                <!-- Projeto: Manô (Publicidade) -->
+                <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="publicidade">
+                    <div class="h-64 bg-[#FFF9E6] overflow-hidden relative flex-shrink-0 flex items-center justify-center p-4">
+                        <img src="PIZZA MANO.png" alt="Manô Identidade Visual" class="w-full h-full object-contain group-hover:scale-105 transition duration-500 rounded-2xl">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                            Publicidade
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col justify-between flex-grow">
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Manô | Identidade Visual & Branding</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Criação de identidade visual para loja de alimentação com o conceito <em>“Ingredientes orgânicos, para comer com as mãos”</em>. Desenvolvido a partir de desenhos manuais vetorizados no Adobe Illustrator, sob orientação do professor <strong>Diogo Maduell</strong>.
                             </p>
                         </div>
-                    </div>
-                    
-                    <div class="pt-6 mt-4 border-t border-gray-200 flex flex-wrap items-center justify-between gap-4">
-                        <button onclick="toggleProjeto('detalhes-riogastronomia', this)" class="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#0055FF] focus:outline-none">
-                            <span>Ver detalhes</span>
-                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
                         
-                        <div class="flex items-center gap-4">
-                            <button onclick="abrirModalRioGastronomia()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                        <div class="pt-6 mt-4 border-t border-gray-200">
+                            <button onclick="abrirModalMano()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
                                 <span>Ver apresentação</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </button>
-                            <a href="https://canva.link/0sshd3ului1lcl2" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-[#0055FF] transition-colors flex items-center gap-1">
-                                Canva
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: PUCmon (Tech & UX) -->
+                <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
+                    <div class="h-64 bg-blue-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center">
+                        <img src="Captura de Tela 2026-11-16 às 14.28.35.png" alt="PUCmon Capa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                            Tech & UX
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col justify-between flex-grow">
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">PUCmon | Jogo em Realidade Aumentada</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Conceito de jogo em AR centrado na captura dinâmica de criaturas por arremesso de pedras e evolução estilo <em>Tamagotchi</em> baseada em afinidade.
+                            </p>
+                        </div>
+                        
+                        <div class="pt-6 mt-4 border-t border-gray-200">
+                            <button onclick="abrirModalPucmon()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                                <span>Ver apresentação</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: Rio Gastronomia (Publicidade) -->
+                <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="publicidade">
+                    <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
+                        <img src="Captura de Tela 2026-11-13 às 17.36.28.jpg" alt="Rio Gastronomia - Sabores que contam histórias" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                            Publicidade
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col justify-between flex-grow">
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Rio Gastronomia - Sabores que contam histórias</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Desenvolvimento de um projeto de ativação estratégica para uma parceria entre a PUC-Rio e Rio Gastronomia, realizado na disciplina de Mídias Exper e Entretenimento, ministrada pelo professor Marcos Barbato.
+                            </p>
+                            
+                            <div id="detalhes-riogastronomia" class="hidden space-y-3 pt-4 border-t border-gray-200 mt-4 text-sm text-gray-600">
+                                <p>
+                                    O projeto explorou as sinergias entre literatura e entretenimento no contexto de um grande festival gastronômico, proponando ações de ativação de marca (com a Editora ALT, da Globo Livros), experiências imersivas e narrativas voltadas para o engajamento e a atração da Geração Z.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-6 mt-4 border-t border-gray-200 flex flex-wrap items-center justify-between gap-4">
+                            <button onclick="toggleProjeto('detalhes-riogastronomia', this)" class="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#0055FF] focus:outline-none">
+                                <span>Ver detalhes</span>
+                                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            
+                            <div class="flex items-center gap-4">
+                                <button onclick="abrirModalRioGastronomia()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                                    <span>Ver apresentação</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                </button>
+                                <a href="https://canva.link/0sshd3ului1lcl2" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-[#0055FF] transition-colors flex items-center gap-1">
+                                    Canva
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: Ignição - Petrobras (Tech & UX) -->
+                <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
+                    <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
+                        <img src="Captura de Tela 2026-11-13 às 16.54.10.png" alt="Ignição Petrobras" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                            Tech & UX
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col justify-between flex-grow">
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Ignição - Petrobras</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                O Ignição é um Programa de Inovação Tecnológica promovido pela PUC-Rio que tem por objetivo fomentar a experimentação, desafiando jovens a co-criarem soluções para a transformação digital do setor de óleo e gás.
+                            </p>
+                            
+                            <div id="detalhes-ignicao" class="hidden space-y-4 pt-4 border-t border-gray-200 mt-4 text-sm text-gray-600">
+                                <div>
+                                    <strong class="text-gray-900 block mb-1">Desenvolvimento e Inovação Tecnológica:</strong>
+                                    <ul class="list-disc list-inside space-y-1 text-gray-500">
+                                        <li>Inteligência Artificial (IA)</li>
+                                        <li>Web 3.0 & Blockchain</li>
+                                        <li>Internet das Coisas (IoT)</li>
+                                        <li>Desenvolvimento de soluções digitais</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong class="text-gray-900 block mb-1">Design e Experiência do Usuário:</strong>
+                                    <ul class="list-disc list-inside space-y-1 text-gray-500">
+                                        <li>Web Design e Experiência do Usuário (UX)</li>
+                                        <li>Estruturação de interfaces e prototipagem</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong class="text-gray-900 block mb-1">Gestão:</strong>
+                                    <ul class="list-disc list-inside space-y-1 text-gray-500">
+                                        <li>Metodologias Ágeis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-6 mt-4 border-t border-gray-200">
+                            <button onclick="toggleProjeto('detalhes-ignicao', this)" class="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#0055FF] focus:outline-none">
+                                <span>Ver detalhes</span>
+                                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: Mulher de Favela (Audiovisual) -->
+                <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="audiovisual">
+                    <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
+                        <img src="image_a88b1a.jpg" alt="Mulher de Favela Audiolivro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                            Audiovisual
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col justify-between flex-grow">
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Mulher de Favela (Audiolivro)</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Mulher de Favela é um projeto que registra em audiolivro as histórias de 30 lideranças mulheres de favelas e periferias do estado do Rio de Janeiro. Produzido pela PUC-Rio, as entrevistas destacam o protagonismo, a resistência e o saber local dessas mulheres, promovendo a memória oral como ferramenta de transformação social. <strong>Atuei em equipe técnica de captação de áudio, utilizando o Reaper.</strong>
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-gray-200">
+                            <a href="https://open.spotify.com/show/13S81yMAMtQmT61GnBgmZG?si=722407ccb0a145d3" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline">
+                                Ouvir no Spotify 
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Projeto: Ignição - Petrobras (Tech & UX) -->
-            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
-                <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
-                    <img src="Captura de Tela 2026-11-13 às 16.54.10.png" alt="Ignição Petrobras" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Tech & UX
-                    </span>
-                </div>
-                <div class="p-8 flex flex-col justify-between flex-grow">
-                    <div>
-                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Ignição - Petrobras</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            O Ignição é um Programa de Inovação Tecnológica promovido pela PUC-Rio que tem por objetivo fomentar a experimentação, desafiando jovens a co-criarem soluções para a transformação digital do setor de óleo e gás.
-                        </p>
-                        
-                        <div id="detalhes-ignicao" class="hidden space-y-4 pt-4 border-t border-gray-200 mt-4 text-sm text-gray-600">
-                            <div>
-                                <strong class="text-gray-900 block mb-1">Desenvolvimento e Inovação Tecnológica:</strong>
-                                <ul class="list-disc list-inside space-y-1 text-gray-500">
-                                    <li>Inteligência Artificial (IA)</li>
-                                    <li>Web 3.0 & Blockchain</li>
-                                    <li>Internet das Coisas (IoT)</li>
-                                    <li>Desenvolvimento de soluções digitais</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <strong class="text-gray-900 block mb-1">Design e Experiência do Usuário:</strong>
-                                <ul class="list-disc list-inside space-y-1 text-gray-500">
-                                    <li>Web Design e Experiência do Usuário (UX)</li>
-                                    <li>Estruturação de interfaces e prototipagem</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <strong class="text-gray-900 block mb-1">Gestão:</strong>
-                                <ul class="list-disc list-inside space-y-1 text-gray-500">
-                                    <li>Metodologias Ágeis</li>
-                                </ul>
+                <!-- Projeto: As Crônicas de Nárnia (Audiovisual com Player Nativo) -->
+                <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="audiovisual">
+                    <div class="h-80 bg-gray-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center p-4">
+                        <img src="narnia.jpg" alt="As Crônicas de Nárnia - Capítulo 1" class="h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                            Audiovisual
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col justify-between flex-grow">
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Histórias em Áudio | Nárnia (Cap. 1)</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Narração e pós-produção do primeiro capítulo do clássico de C.S. Lewis. Um projeto imersivo de design de som e interpretação vocal desenvolvido para a disciplina de Experimentação em Mídias Sonoras, sob a orientação do professor <strong>Creso Soares</strong>.
+                            </p>
+                            
+                            <!-- Player de Áudio Nativo Integrado -->
+                            <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm mt-4">
+                                <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider block mb-2 text-center">Ouça o Capítulo Narrado</span>
+                                <audio controls class="w-full">
+                                    <source src="narnia.mp3" type="audio/mpeg">
+                                    Seu navegador não suporta o elemento de áudio.
+                                </audio>
                             </div>
                         </div>
                     </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Currículo & Habilidades -->
+        <section id="curriculo" class="max-w-4xl mx-auto px-8 py-24 border-t border-gray-100">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
+                <h2 class="text-3xl font-black tracking-tight">Currículo & Habilidades</h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-16">
+                
+                <!-- Experiência & Formação -->
+                <div class="space-y-16">
                     
-                    <div class="pt-6 mt-4 border-t border-gray-200">
-                        <button onclick="toggleProjeto('detalhes-ignicao', this)" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
-                            <span>Ver detalhes</span>
-                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projeto: Mulher de Favela (Audiovisual) -->
-            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="audiovisual">
-                <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
-                    <img src="image_a88b1a.jpg" alt="Mulher de Favela Audiolivro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Audiovisual
-                    </span>
-                </div>
-                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <!-- Experiência -->
                     <div>
-                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Mulher de Favela (Audiolivro)</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Mulher de Favela é um projeto que registra em audiolivro as histórias de 30 lideranças mulheres de favelas e periferias do estado do Rio de Janeiro. Produzido pela PUC-Rio, as entrevistas destacam o protagonismo, a resistência e o saber local dessas mulheres, promovendo a memória oral como ferramenta de transformação social. <strong>Atuei em equipe técnica de captação de áudio, utilizando o Reaper.</strong>
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-4 border-t border-gray-200">
-                        <a href="https://open.spotify.com/show/13S81yMAMtQmT61GnBgmZG?si=722407ccb0a145d3" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline">
-                            Ouvir no Spotify 
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                        <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Experiência Profissional</h3>
+                        <div class="space-y-12">
+                            
+                            <!-- Item 1: Ignição Petrobras -->
+                            <div class="border-l-2 border-gray-200 pl-6 relative">
+                                <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#0055FF]"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                    <h4 class="text-lg font-bold">Estágio | Programa Ignição Petrobras</h4>
+                                    <span class="text-sm font-medium text-gray-400">Mar 2026 – Atual</span>
+                                </div>
+                                <p class="text-sm font-semibold text-[#0055FF] mb-3">Instituto ECOA PUC-Rio</p>
+                                <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                                    <li>Desenvolvo soluções em projetos de P&D em times multidisciplinares no contexto de inovação tecnológica.</li>
+                                    <li>Atuo na frente de design, com foco em web design e experiência do usuário (UX).</li>
+                                    <li>Estruturo interfaces e contribuo para a construção de soluções digitais.</li>
+                                    <li>Colaboro com as frentes de programação e organização no desenvolvimento dos projetos.</li>
+                                </ul>
+                            </div>
 
-            <!-- Projeto: As Crônicas de Nárnia (Audiovisual com Player Nativo) -->
-            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="audiovisual">
-                <div class="h-80 bg-gray-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center p-4">
-                    <img src="narnia.jpg" alt="As Crônicas de Nárnia - Capítulo 1" class="h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Audiovisual
-                    </span>
-                </div>
-                <div class="p-8 flex flex-col justify-between flex-grow">
-                    <div>
-                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Histórias em Áudio | Nárnia (Cap. 1)</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Narração e pós-produção do primeiro capítulo do clássico de C.S. Lewis. Um projeto imersivo de design de som e interpretação vocal desenvolvido para a disciplina de Experimentação em Mídias Sonoras, sob a orientação do professor <strong>Creso Soares</strong>.
-                        </p>
-                        
-                        <!-- Player de Áudio Nativo Integrado -->
-                        <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm mt-4">
-                            <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider block mb-2 text-center">Ouça o Capítulo Narrado</span>
-                            <audio controls class="w-full">
-                                <source src="narnia.mp3" type="audio/mpeg">
-                                Seu navegador não suporta o elemento de áudio.
-                            </audio>
+                            <!-- Item 2: LABCOM PUC-Rio -->
+                            <div class="border-l-2 border-gray-200 pl-6 relative">
+                                <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-300"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                    <h4 class="text-lg font-bold">Estagiário Técnico</h4>
+                                    <span class="text-sm font-medium text-gray-400">Fev 2025 – Fev 2026</span>
+                                </div>
+                                <p class="text-sm font-semibold text-[#0055FF] mb-3">PUC-Rio LABCOM (Estúdios de Áudio e TV)</p>
+                                <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                                    <li>Produzi e editei conteúdos audiovisuais para disciplinas e projetos acadêmicos, da gravação à pós-produção.</li>
+                                    <li>Realizei captação e tratamento de áudio em estúdio, com ajuste de níveis, cortes, sonoras e trilhas.</li>
+                                    <li>Operei equipamentos de estúdio de TV, incluindo câmeras, teleprompter e switcher.</li>
+                                    <li>Prestei suporte técnico a alunos durante gravações.</li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
+
+                    <!-- Formação -->
+                    <div>
+                        <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Formação</h3>
+                        <div class="space-y-8">
+                            <div class="border-l-2 border-gray-200 pl-6 relative">
+                                <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#0055FF]"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                    <h4 class="text-lg font-bold">Bacharelado em Estudos de Mídia</h4>
+                                    <span class="text-sm font-medium text-gray-400">2024 – 2028</span>
+                                </div>
+                                <p class="text-sm font-semibold text-[#0055FF]">PUC-Rio</p>
+                                <p class="text-xs text-gray-500 mt-1">Ênfase em Publicidade e Comunicação Corporativa & Comunicação e Tecnologia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Habilidades & Ferramentas & Idiomas -->
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Habilidades & Ferramentas</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-sm font-bold mb-2">
+                                    <span>Adobe Illustrator</span>
+                                    <span class="text-[#0055FF]">Avançado</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-[#0055FF] h-full rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm font-bold mb-2">
+                                    <span>Reaper (Edição de Áudio)</span>
+                                    <span class="text-[#0055FF]">Avançado</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-[#0055FF] h-full rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm font-bold mb-2">
+                                    <span>After Effects</span>
+                                    <span class="text-[#0055FF]">Intermediário</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-[#0055FF] h-full rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm font-bold mb-2">
+                                    <span>DaVinci Resolve & CapCut</span>
+                                    <span class="text-[#0055FF]">Avançado</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-[#0055FF] h-full rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm font-bold mb-2">
+                                    <span>Canva & UX Tools</span>
+                                    <span class="text-[#0055FF]">Avançado</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-[#0055FF] h-full rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Idiomas -->
+                    <div>
+                        <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-4">Idiomas</h3>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li>Português</li>
+                            <li>Inglês</li>
+                            <li>Espanhol</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Contato -->
+        <footer id="contato" class="bg-gray-900 text-white py-16 px-8">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0 text-center md:text-left">
+                    <h2 class="text-3xl font-black mb-2 tracking-tight">Vamos construir algo?</h2>
+                    <p class="text-gray-400">Aberto a novas ideias e desafios.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">LinkedIn</a>
+                    <a href="https://www.instagram.com/igormarte" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">Instagram</a>
+                    <a href="mailto:igormartinspuc@gmail.com" class="hover:text-[#0055FF] transition-colors font-medium">E-mail</a>
                 </div>
             </div>
+        </footer>
 
-        </div>
-    </section>
+    </main>
 
+    <!-- Modais e Scripts mantidos iguais -->
     <!-- Modal Manô -->
     <div id="modal-mano" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
@@ -316,21 +504,17 @@
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Apresentação da Identidade Visual</span>
                     <h3 class="text-xl font-black text-gray-900 mt-0.5">Manô | Peças Gráficas e Aplicações</h3>
                 </div>
-                <button onclick="fecharModalMano()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">
-                    ✕
-                </button>
+                <button onclick="fecharModalMano()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">✕</button>
             </div>
-
             <div class="p-6 overflow-y-auto flex-grow space-y-12 bg-gray-50/50">
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">01 / Logotipo & Conceito</span>
                     <div class="w-full bg-[#FFF9E6] rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-4">
-                        <img src="Captura de Tela 2026-11-16 às 16.04.08.png" alt="Logotipo Manô" class="w-full h-auto object-contain max-h-[350px] rounded-lg">
+                        <img src="PIZZA MANO.png" alt="Logotipo Manô" class="w-full h-auto object-contain max-h-[350px] rounded-lg">
                     </div>
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Identidade Gráfica Manual</h4>
                     <p class="text-sm text-gray-600 max-w-md">Desenho feito à mão livre e vetorizado no Adobe Illustrator, integrando ícones orgânicos de ingredientes.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">02 / Sinalização e Fachada</span>
                     <div class="w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -339,7 +523,6 @@
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Letreiro Externo</h4>
                     <p class="text-sm text-gray-600 max-w-md">Aplicação da identidade em placa de sinalização de fachada em ambiente rústico.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">03 / Padrão (Pattern) e Copos</span>
                     <div class="w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -348,7 +531,6 @@
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Aplicação em Copos de Papel</h4>
                     <p class="text-sm text-gray-600 max-w-md">Utilização do padrão repetido (pattern) desenvolvido no Illustrator para copos do estabelecimento.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">04 / Embalagem de Alimentos</span>
                     <div class="w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -358,11 +540,8 @@
                     <p class="text-sm text-gray-600 max-w-md">Caixa de alimentos personalizada com o logotipo central e ícones dos ingredientes orgânicos.</p>
                 </div>
             </div>
-
             <div class="p-4 border-t border-gray-100 bg-white text-center">
-                <button onclick="fecharModalMano()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">
-                    Fechar Apresentação
-                </button>
+                <button onclick="fecharModalMano()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">Fechar Apresentação</button>
             </div>
         </div>
     </div>
@@ -375,11 +554,8 @@
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Apresentação Interativa</span>
                     <h3 class="text-xl font-black text-gray-900 mt-0.5">PUCmon | Realidade Aumentada</h3>
                 </div>
-                <button onclick="fecharModalPucmon()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">
-                    ✕
-                </button>
+                <button onclick="fecharModalPucmon()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">✕</button>
             </div>
-
             <div class="p-6 overflow-y-auto flex-grow space-y-12 bg-gray-50/50">
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">01 / Capa Oficial</span>
@@ -389,7 +565,6 @@
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Explore, Colecione e Conecte-se</h4>
                     <p class="text-sm text-gray-600 max-w-md">O universo de PUCmon em Realidade Aumentada criado para agitar o campus.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">02 / Acesso à Plataforma</span>
                     <div class="w-48 h-48 bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-200 p-2">
@@ -397,11 +572,8 @@
                     </div>
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Teste agora no seu celular</h4>
                     <p class="text-sm text-gray-600 max-w-md mb-3">Acesse a plataforma oficial do jogo e comece a sua jornada em AR:</p>
-                    <a href="https://pucmon.netlify.app" target="_blank" class="inline-block bg-[#0055FF] text-white text-xs font-bold py-2.5 px-6 rounded-xl hover:bg-blue-700 transition-colors shadow-sm">
-                        🌐 pucmon.netlify.app
-                    </a>
+                    <a href="https://pucmon.netlify.app" target="_blank" class="inline-block bg-[#0055FF] text-white text-xs font-bold py-2.5 px-6 rounded-xl hover:bg-blue-700 transition-colors shadow-sm">🌐 pucmon.netlify.app</a>
                 </div>
-
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">03 / Captura de Criatura</span>
                     <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -410,7 +582,6 @@
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Aponte para capturar o Bicho #1</h4>
                     <p class="text-sm text-gray-600 max-w-md">Abra a câmera no site e aponte para este marcador para iniciar a captura no modo AR.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">04 / Captura de Criatura</span>
                     <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -419,7 +590,6 @@
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Aponte para capturar o Bicho #2</h4>
                     <p class="text-sm text-gray-600 max-w-md">Segundo marcador de criatura disponível para teste de captura ao vivo.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">05 / Captura de Criatura</span>
                     <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -429,11 +599,8 @@
                     <p class="text-sm text-gray-600 max-w-md">Terceiro marcador de criatura para completar sua coleção inicial de PUCmons.</p>
                 </div>
             </div>
-
             <div class="p-4 border-t border-gray-100 bg-white text-center">
-                <button onclick="fecharModalPucmon()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">
-                    Fechar Apresentação
-                </button>
+                <button onclick="fecharModalPucmon()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">Fechar Apresentação</button>
             </div>
         </div>
     </div>
@@ -446,249 +613,65 @@
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Apresentação Completa</span>
                     <h3 class="text-xl font-black text-gray-900 mt-0.5">Rio Gastronomia | 22 Slides</h3>
                 </div>
-                <button onclick="fecharModalRioGastronomia()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">
-                    ✕
-                </button>
+                <button onclick="fecharModalRioGastronomia()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">✕</button>
             </div>
-
-            <div id="slides-container-riogastronomia" class="p-6 overflow-y-auto flex-grow space-y-8 bg-gray-50/50">
-                <!-- Injetado via script -->
-            </div>
-
+            <div id="slides-container-riogastronomia" class="p-6 overflow-y-auto flex-grow space-y-8 bg-gray-50/50"></div>
             <div class="p-4 border-t border-gray-100 bg-white text-center">
-                <button onclick="fecharModalRioGastronomia()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">
-                    Fechar Apresentação
-                </button>
+                <button onclick="fecharModalRioGastronomia()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">Fechar Apresentação</button>
             </div>
         </div>
     </div>
 
-    <!-- Currículo & Habilidades -->
-    <section id="curriculo" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
-            <h2 class="text-3xl font-black tracking-tight">Currículo & Habilidades</h2>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            <!-- Coluna Esquerda: Experiência & Formação -->
-            <div class="lg:col-span-7 space-y-16">
-                
-                <!-- Experiência -->
-                <div>
-                    <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Experiência Profissional</h3>
-                    <div class="space-y-12">
-                        
-                        <!-- Item 1: Ignição Petrobras -->
-                        <div class="border-l-2 border-gray-200 pl-6 relative">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#0055FF]"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                                <h4 class="text-lg font-bold">Estágio | Programa Ignição Petrobras</h4>
-                                <span class="text-sm font-medium text-gray-400">Mar 2026 – Atual</span>
-                            </div>
-                            <p class="text-sm font-semibold text-[#0055FF] mb-3">Instituto ECOA PUC-Rio</p>
-                            <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside">
-                                <li>Desenvolvo soluções em projetos de P&D em times multidisciplinares no contexto de inovação tecnológica.</li>
-                                <li>Atuo na frente de design, com foco em web design e experiência do usuário (UX).</li>
-                                <li>Estruturo interfaces e contribuo para a construção de soluções digitais.</li>
-                                <li>Colaboro com as frentes de programação e organização no desenvolvimento dos projetos.</li>
-                            </ul>
-                        </div>
-
-                        <!-- Item 2: LABCOM PUC-Rio -->
-                        <div class="border-l-2 border-gray-200 pl-6 relative">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-300"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                                <h4 class="text-lg font-bold">Estagiário Técnico</h4>
-                                <span class="text-sm font-medium text-gray-400">Fev 2025 – Fev 2026</span>
-                            </div>
-                            <p class="text-sm font-semibold text-[#0055FF] mb-3">PUC-Rio LABCOM (Estúdios de Áudio e TV)</p>
-                            <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside">
-                                <li>Produzi e editei conteúdos audiovisuais para disciplinas e projetos acadêmicos, da gravação à pós-produção.</li>
-                                <li>Realizei captação e tratamento de áudio em estúdio, com ajuste de níveis, cortes, sonoras e trilhas.</li>
-                                <li>Operei equipamentos de estúdio de TV, incluindo câmeras, teleprompter e switcher.</li>
-                                <li>Prestei suporte técnico a alunos durante gravações.</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Formação -->
-                <div>
-                    <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Formação</h3>
-                    <div class="space-y-8">
-                        <div class="border-l-2 border-gray-200 pl-6 relative">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#0055FF]"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                <h4 class="text-lg font-bold">Bacharelado em Estudos de Mídia</h4>
-                                <span class="text-sm font-medium text-gray-400">2024 – 2028</span>
-                            </div>
-                            <p class="text-sm font-semibold text-[#0055FF]">PUC-Rio</p>
-                            <p class="text-xs text-gray-500 mt-1">Ênfase em Publicidade e Comunicação Corporativa & Comunicação e Tecnologia.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Coluna Direita: Habilidades & Ferramentas -->
-            <div class="lg:col-span-5 space-y-12">
-                <div>
-                    <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Habilidades & Ferramentas</h3>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span>Adobe Illustrator</span>
-                                <span class="text-[#0055FF]">Avançado</span>
-                            </div>
-                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-[#0055FF] h-full rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span>Reaper (Edição de Áudio)</span>
-                                <span class="text-[#0055FF]">Avançado</span>
-                            </div>
-                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-[#0055FF] h-full rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span>After Effects</span>
-                                <span class="text-[#0055FF]">Intermediário</span>
-                            </div>
-                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-[#0055FF] h-full rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span>DaVinci Resolve & CapCut</span>
-                                <span class="text-[#0055FF]">Avançado</span>
-                            </div>
-                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-[#0055FF] h-full rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span>Canva & UX Tools</span>
-                                <span class="text-[#0055FF]">Avançado</span>
-                            </div>
-                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-[#0055FF] h-full rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Idiomas -->
-                <div>
-                    <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-4">Idiomas</h3>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li>Português</li>
-                        <li>Inglês</li>
-                        <li>Espanhol</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer / Contato -->
-    <footer id="contato" class="bg-gray-900 text-white py-16">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-8 md:mb-0 text-center md:text-left">
-                <h2 class="text-3xl font-black mb-2 tracking-tight">Vamos construir algo?</h2>
-                <p class="text-gray-400">Aberto a novas ideias e desafios.</p>
-            </div>
-            <div class="flex gap-6">
-                <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">LinkedIn</a>
-                <a href="https://www.instagram.com/igormarte" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">Instagram</a>
-                <a href="mailto:igormartinspuc@gmail.com" class="hover:text-[#0055FF] transition-colors font-medium">E-mail</a>
-            </div>
-        </div>
-    </footer>
-
     <!-- Scripts -->
     <script>
-        // Funções Modal Manô
         function abrirModalMano() {
             const modal = document.getElementById('modal-mano');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            modal.classList.remove('hidden'); modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
-
         function fecharModalMano() {
             const modal = document.getElementById('modal-mano');
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
+            modal.classList.remove('flex'); modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
-
-        // Funções Modal PUCmon
         function abrirModalPucmon() {
             const modal = document.getElementById('modal-pucmon');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            modal.classList.remove('hidden'); modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
-
         function fecharModalPucmon() {
             const modal = document.getElementById('modal-pucmon');
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
+            modal.classList.remove('flex'); modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
-
-        // Funções Modal Rio Gastronomia
         function abrirModalRioGastronomia() {
             const modal = document.getElementById('modal-riogastronomia');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            modal.classList.remove('hidden'); modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
-
         function fecharModalRioGastronomia() {
             const modal = document.getElementById('modal-riogastronomia');
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
+            modal.classList.remove('flex'); modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
 
         document.addEventListener("DOMContentLoaded", () => {
             const totalSlides = 22;
             const container = document.getElementById('slides-container-riogastronomia');
-
             if (container) {
                 for (let i = 1; i <= totalSlides; i++) {
                     const card = document.createElement('div');
                     card.className = "bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center";
-
                     const badge = document.createElement('span');
                     badge.className = "text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2";
                     badge.innerText = `[ Slide ${i} de ${totalSlides} ]`;
-
                     const wrapper = document.createElement('div');
                     wrapper.className = "w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-2 border border-gray-100 p-2";
-
                     const img = document.createElement('img');
                     img.src = `RIO GASTRONOMIA/${i}.png`; 
                     img.alt = `Slide ${i} - Rio Gastronomia`;
                     img.loading = "lazy";
                     img.className = "w-full h-auto object-contain max-h-[500px] rounded-lg";
-                    
                     img.onerror = function() {
                         this.style.display = 'none';
                         const aviso = document.createElement('p');
@@ -696,7 +679,6 @@
                         aviso.innerText = `Arquivo "${i}.png" não encontrado dentro da pasta RIO GASTRONOMIA.`;
                         wrapper.appendChild(aviso);
                     };
-
                     wrapper.appendChild(img);
                     card.appendChild(badge);
                     card.appendChild(wrapper);
@@ -709,7 +691,6 @@
             const el = document.getElementById(id);
             const textSpan = btn.querySelector('span');
             const svg = btn.querySelector('svg');
-            
             if (el.classList.contains('hidden')) {
                 el.classList.remove('hidden');
                 textSpan.textContent = 'Recolher';
@@ -724,18 +705,15 @@
         function filtrarProjetos(categoria) {
             const cards = document.querySelectorAll('.projeto-card');
             const botoes = document.querySelectorAll('.flex.gap-2.overflow-x-auto button');
-            
             botoes.forEach(btn => {
                 btn.classList.remove('bg-[#0055FF]', 'text-white');
                 btn.classList.add('bg-gray-100', 'text-gray-600');
             });
-            
             const btnAtivo = document.getElementById('btn-' + categoria);
             if (btnAtivo) {
                 btnAtivo.classList.remove('bg-gray-100', 'text-gray-600');
                 btnAtivo.classList.add('bg-[#0055FF]', 'text-white');
             }
-
             cards.forEach(card => {
                 if (categoria === 'todos' || card.getAttribute('data-categoria') === categoria) {
                     card.style.display = 'flex';
