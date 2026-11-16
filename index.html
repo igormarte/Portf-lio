@@ -14,31 +14,36 @@
 </head>
 <body class="bg-white text-gray-900 antialiased selection:bg-[#0055FF] selection:text-white flex flex-col md:flex-row min-h-screen">
 
-    <!-- Sidebar Esquerda (Fixa no Desktop) -->
+    <!-- Sidebar Esquerda (Fixa no Desktop) - Estilo Editorial Refinado -->
     <aside class="w-full md:w-72 bg-white md:fixed md:top-0 md:left-0 md:h-screen border-b md:border-b-0 md:border-r border-gray-100 p-8 flex flex-col justify-between z-40">
         <div>
             <!-- Logo / Nome -->
-            <a href="#" class="block mb-12">
-                <span class="font-black text-2xl tracking-tighter">IGOR.</span>
-                <span class="block text-xs text-gray-400 uppercase tracking-widest mt-1">Estudos de Mídia</span>
+            <a href="#topo" class="block mb-16">
+                <span class="font-black text-2xl tracking-tighter block mb-1">IGOR.</span>
+                <span class="text-xs text-gray-400 uppercase tracking-widest block font-medium">Estudos de Mídia</span>
             </a>
 
-            <!-- Navegação Vertical -->
-            <nav class="space-y-4 hidden md:block">
-                <a href="#topo" class="block text-sm font-semibold text-gray-900 hover:text-[#0055FF] transition-colors">Início</a>
-                <a href="#sobre" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Sobre mim</a>
-                <a href="#projetos" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Projetos</a>
-                <a href="#curriculo" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Currículo</a>
-                <a href="#contato" class="block text-sm font-semibold text-gray-500 hover:text-[#0055FF] transition-colors">Contato</a>
+            <!-- Navegação Vertical Estilo Editorial -->
+            <nav class="space-y-6 hidden md:block">
+                <a href="#topo" class="block text-xs font-bold tracking-widest text-gray-900 uppercase hover:text-[#0055FF] transition-colors">Início</a>
+                <a href="#sobre" class="block text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Sobre mim</a>
+                <a href="#projetos" class="block text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Projetos</a>
+                <a href="#curriculo" class="block text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Currículo</a>
+                <a href="#contato" class="block text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Contato</a>
             </nav>
         </div>
 
         <!-- Links Sociais na Base da Sidebar -->
-        <div class="hidden md:flex flex-col space-y-2 pt-6 border-t border-gray-100">
-            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Redes</span>
-            <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="text-xs font-medium text-gray-600 hover:text-[#0055FF] transition-colors">LinkedIn ↗</a>
-            <a href="https://www.instagram.com/igormarte" target="_blank" class="text-xs font-medium text-gray-600 hover:text-[#0055FF] transition-colors">Instagram ↗</a>
-            <a href="mailto:igormartinspuc@gmail.com" class="text-xs font-medium text-gray-600 hover:text-[#0055FF] transition-colors">E-mail ↗</a>
+        <div class="hidden md:flex flex-col space-y-2 pt-8 border-t border-gray-100">
+            <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors flex items-center justify-between">
+                <span>LinkedIn</span> <span>↗</span>
+            </a>
+            <a href="https://www.instagram.com/igormarte" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors flex items-center justify-between">
+                <span>Instagram</span> <span>↗</span>
+            </a>
+            <a href="mailto:igormartinspuc@gmail.com" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors flex items-center justify-between">
+                <span>E-mail</span> <span>↗</span>
+            </a>
         </div>
 
         <!-- Botão Mobile para Contato -->
@@ -52,7 +57,7 @@
         </div>
     </aside>
 
-    <!-- Conteúdo Principal (Expandido para preencher o espaço à direita) -->
+    <!-- Conteúdo Principal -->
     <main class="flex-1 md:ml-72 w-full">
 
         <!-- Hero Section (Tela Cheia / Fullscreen) -->
@@ -495,7 +500,7 @@
 
     </main>
 
-    <!-- Modais e Scripts mantidos iguais -->
+    <!-- Modais e Scripts -->
     <!-- Modal Manô -->
     <div id="modal-mano" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
