@@ -130,10 +130,10 @@
         <!-- Grid de Projetos -->
         <div id="grid-projetos" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             
-            <!-- Projeto: PUCmon (Tech & UX / Abre Modal de Apresentação) -->
+            <!-- Projeto: PUCmon (Tech & UX / Abre Modal Vertical) -->
             <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
                 <div class="h-64 bg-blue-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center">
-                    <img src="Captura de Tela 2026-11-13 às 14.28.35.png" alt="PUCmon Capa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <img src="Captura de Tela 2026-11-16 às 14.28.35.png" alt="PUCmon Capa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                         Tech & UX
                     </span>
@@ -267,39 +267,83 @@
         </div>
     </section>
 
-    <!-- Modal / Mini-Página Flutuante de Apresentação (PUCmon) -->
+    <!-- Modal / Mini-Página Vertical com Scroll (PUCmon) -->
     <div id="modal-pucmon" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
             
-            <!-- Header do Modal com Botão X -->
-            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <!-- Header do Modal com Título e Botão X -->
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50 sticky top-0 z-10">
                 <div>
-                    <span id="modal-tag" class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Slide 1 de 5</span>
-                    <h3 id="modal-titulo" class="text-xl font-black text-gray-900 mt-0.5">Capa do Projeto</h3>
+                    <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Apresentação Interativa</span>
+                    <h3 class="text-xl font-black text-gray-900 mt-0.5">PUCmon | Realidade Aumentada</h3>
                 </div>
                 <button onclick="fecharModalPucmon()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">
                     ✕
                 </button>
             </div>
 
-            <!-- Corpo do Slide (Imagem + Descrição em formato vertical) -->
-            <div class="p-6 overflow-y-auto flex-grow flex flex-col items-center justify-center text-center bg-gray-50/50">
-                <div class="w-full max-h-[380px] bg-gray-900 rounded-2xl overflow-hidden shadow-md flex items-center justify-center mb-6 border border-gray-200">
-                    <img id="modal-imagem" src="" alt="Slide PUCmon" class="w-full h-full object-contain max-h-[380px]">
+            <!-- Corpo Vertical com Rolagem (Todas as fotos e textos em sequência de cima para baixo) -->
+            <div class="p-6 overflow-y-auto flex-grow space-y-12 bg-gray-50/50">
+                
+                <!-- Slide 1: Capa -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">01 / Capa Oficial</span>
+                    <div class="w-full max-h-[350px] bg-gray-900 rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100">
+                        <img src="Captura de Tela 2026-11-16 às 14.28.35.png" alt="Capa PUCmon" class="w-full h-full object-contain max-h-[350px]">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-1">Explore, Colecione e Conecte-se</h4>
+                    <p class="text-sm text-gray-600 max-w-md">O universo de PUCmon em Realidade Aumentada criado para agitar o campus.</p>
                 </div>
-                <p id="modal-descricao" class="text-sm text-gray-600 max-w-lg leading-relaxed">
-                    Explore o universo de PUCmon em Realidade Aumentada.
-                </p>
+
+                <!-- Slide 2: QR Code do Site -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">02 / Acesso à Plataforma</span>
+                    <div class="w-48 h-48 bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-200 p-2">
+                        <img src="image_c5a43e.png" alt="QR Code Site" class="w-full h-full object-contain">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-1">Teste agora no seu celular</h4>
+                    <p class="text-sm text-gray-600 max-w-md mb-3">Acesse a plataforma oficial do jogo e comece a sua jornada em AR:</p>
+                    <a href="https://pucmon.netlify.app" target="_blank" class="inline-block bg-[#0055FF] text-white text-xs font-bold py-2.5 px-6 rounded-xl hover:bg-blue-700 transition-colors shadow-sm">
+                        🌐 pucmon.netlify.app
+                    </a>
+                </div>
+
+                <!-- Slide 3: Captura Bicho 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">03 / Captura de Criatura</span>
+                    <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
+                        <img src="image_c5a137.jpg" alt="Marcador Bicho 1" class="w-full h-full object-contain max-h-[350px]">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-1">Aponte para capturar o Bicho #1</h4>
+                    <p class="text-sm text-gray-600 max-w-md">Abra a câmera no site e aponte para este marcador para iniciar a captura no modo AR.</p>
+                </div>
+
+                <!-- Slide 4: Captura Bicho 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">04 / Captura de Criatura</span>
+                    <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
+                        <img src="image_c5a11c.jpg" alt="Marcador Bicho 2" class="w-full h-full object-contain max-h-[350px]">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-1">Aponte para capturar o Bicho #2</h4>
+                    <p class="text-sm text-gray-600 max-w-md">Segundo marcador de criatura disponível para teste de captura ao vivo.</p>
+                </div>
+
+                <!-- Slide 5: Captura Bicho 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">05 / Captura de Criatura</span>
+                    <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
+                        <img src="image_c5a117.jpg" alt="Marcador Bicho 3" class="w-full h-full object-contain max-h-[350px]">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-1">Aponte para capturar o Bicho #3</h4>
+                    <p class="text-sm text-gray-600 max-w-md">Terceiro marcador de criatura para completar sua coleção inicial de PUCmons.</p>
+                </div>
+
             </div>
 
-            <!-- Footer com Navegação -->
-            <div class="p-6 border-t border-gray-100 bg-white flex justify-between items-center">
-                <button onclick="mudarSlideModal(-1)" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors">
-                    ← Anterior
-                </button>
-                <span id="modal-contador" class="text-xs font-bold text-gray-400">1 / 5</span>
-                <button onclick="mudarSlideModal(1)" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-[#0055FF] hover:bg-blue-700 text-white transition-colors shadow-sm">
-                    Próximo →
+            <!-- Footer do Modal -->
+            <div class="p-4 border-t border-gray-100 bg-white text-center">
+                <button onclick="fecharModalPucmon()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">
+                    Fechar Apresentação
                 </button>
             </div>
 
@@ -463,75 +507,20 @@
         </div>
     </footer>
 
-    <!-- Script para gerenciar o Modal Flutuante e Filtros -->
+    <!-- Script para gerenciar o Modal com Scroll Vertical e Filtros -->
     <script>
-        // Dados dos slides com as imagens que você enviou
-        const slidesPucmon = [
-            {
-                tag: "Capa Oficial",
-                titulo: "PUCmon | Realidade Aumentada",
-                imagem: "Captura de Tela 2026-11-16 às 14.28.35.png",
-                descricao: "Explore, colecione e conecte-se no campus através de um jogo interativo em AR."
-            },
-            {
-                tag: "Acesso à Plataforma",
-                titulo: "Entre no Site do Jogo",
-                imagem: "image_c5a43e.png",
-                descricao: "Escaneie o QR code ou acesse diretamente em: <a href='https://pucmon.netlify.app' target='_blank' class='text-[#0055FF] font-bold underline'>pucmon.netlify.app</a>"
-            },
-            {
-                tag: "Captura de Criatura #1",
-                titulo: "Aponte e Capture o Bicho 1",
-                imagem: "image_c5a137.jpg",
-                descricao: "Abra a câmera no site e aponte para este marcador para iniciar a captura no modo AR!"
-            },
-            {
-                tag: "Captura de Criatura #2",
-                titulo: "Aponte e Capture o Bicho 2",
-                imagem: "image_c5a11c.jpg",
-                descricao: "Segundo marcador de criatura disponível para teste de captura ao vivo."
-            },
-            {
-                tag: "Captura de Criatura #3",
-                titulo: "Aponte e Capture o Bicho 3",
-                imagem: "image_c5a117.jpg",
-                descricao: "Terceiro marcador de criatura para completar sua coleção inicial de PUCmons."
-            }
-        ];
-
-        let indexSlideModal = 0;
-
         function abrirModalPucmon() {
-            indexSlideModal = 0;
-            atualizarSlideModal();
             const modal = document.getElementById('modal-pucmon');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Trava o fundo de rolar
         }
 
         function fecharModalPucmon() {
             const modal = document.getElementById('modal-pucmon');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
-        }
-
-        function mudarSlideModal(direcao) {
-            indexSlideModal += direcao;
-            if (indexSlideModal >= slidesPucmon.length) {
-                indexSlideModal = 0;
-            } else if (indexSlideModal < 0) {
-                indexSlideModal = slidesPucmon.length - 1;
-            }
-            atualizarSlideModal();
-        }
-
-        function atualizarSlideModal() {
-            const slide = slidesPucmon[indexSlideModal];
-            document.getElementById('modal-tag').textContent = slide.tag;
-            document.getElementById('modal-titulo').textContent = slide.titulo;
-            document.getElementById('modal-imagem').src = slide.imagem;
-            document.getElementById('modal-descricao').innerHTML = slide.descricao;
-            document.getElementById('modal-contador').textContent = `${indexSlideModal + 1} / ${slidesPucmon.length}`;
+            document.body.style.overflow = 'auto'; // Libera o fundo de rolar
         }
 
         function toggleProjeto(id, btn) {
