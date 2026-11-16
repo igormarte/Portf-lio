@@ -8,8 +8,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        
-        /* Ocultar barra de rolagem nos filtros (mobile) */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -132,7 +130,7 @@
         <!-- Grid de Projetos -->
         <div id="grid-projetos" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             
-            <!-- Projeto: PUCmon (Tech & UX / Jogo AR com Mini Apresentação Interativa) -->
+            <!-- Projeto: PUCmon (Tech & UX / Abre Modal de Apresentação) -->
             <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
                 <div class="h-64 bg-blue-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center">
                     <img src="Captura de Tela 2026-11-13 às 14.28.35.png" alt="PUCmon Capa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -146,40 +144,12 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
                             Conceito de jogo em AR centrado na captura dinâmica de criaturas por arremesso de pedras e evolução estilo <em>Tamagotchi</em> baseada em afinidade.
                         </p>
-                        
-                        <!-- Mini Apresentação de Slides Interativa -->
-                        <div id="detalhes-pucmon" class="hidden space-y-4 pt-4 border-t border-gray-200 mt-4">
-                            <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm min-h-[180px] flex flex-col justify-between">
-                                <!-- Conteúdo do Slide -->
-                                <div>
-                                    <div class="flex justify-between items-center mb-2">
-                                        <span id="pucmon-slide-titulo" class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Módulo 1 de 3</span>
-                                        <span class="text-xs text-gray-400 font-medium">Experiência PUCmon</span>
-                                    </div>
-                                    <h4 id="pucmon-slide-heading" class="text-lg font-bold text-gray-900 mb-1">Captura em Realidade Aumentada</h4>
-                                    <p id="pucmon-slide-texto" class="text-sm text-gray-600 leading-relaxed">
-                                        O jogador utiliza a câmera do celular em AR para localizar as criaturas no ambiente e arremessar pedras até nocautear e capturar o PUCmon.
-                                    </p>
-                                </div>
-
-                                <!-- Navegação do Slide -->
-                                <div class="flex justify-between items-center pt-4 mt-4 border-t border-gray-100">
-                                    <button onclick="mudarSlidePucmon(-1)" class="text-xs font-bold text-gray-500 hover:text-[#0055FF] flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200">
-                                        ← Anterior
-                                    </button>
-                                    <span id="pucmon-contador" class="text-xs font-bold text-gray-400">1 / 3</span>
-                                    <button onclick="mudarSlidePucmon(1)" class="text-xs font-bold text-white bg-[#0055FF] hover:bg-blue-700 flex items-center gap-1 px-3 py-1.5 rounded-lg transition-colors">
-                                        Próximo →
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="pt-6 mt-4 border-t border-gray-200">
-                        <button onclick="toggleProjeto('detalhes-pucmon', this)" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                        <button onclick="abrirModalPucmon()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
                             <span>Ver apresentação</span>
-                            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </button>
                     </div>
                 </div>
@@ -296,6 +266,45 @@
 
         </div>
     </section>
+
+    <!-- Modal / Mini-Página Flutuante de Apresentação (PUCmon) -->
+    <div id="modal-pucmon" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+            
+            <!-- Header do Modal com Botão X -->
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <div>
+                    <span id="modal-tag" class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Slide 1 de 5</span>
+                    <h3 id="modal-titulo" class="text-xl font-black text-gray-900 mt-0.5">Capa do Projeto</h3>
+                </div>
+                <button onclick="fecharModalPucmon()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Corpo do Slide (Imagem + Descrição em formato vertical) -->
+            <div class="p-6 overflow-y-auto flex-grow flex flex-col items-center justify-center text-center bg-gray-50/50">
+                <div class="w-full max-h-[380px] bg-gray-900 rounded-2xl overflow-hidden shadow-md flex items-center justify-center mb-6 border border-gray-200">
+                    <img id="modal-imagem" src="" alt="Slide PUCmon" class="w-full h-full object-contain max-h-[380px]">
+                </div>
+                <p id="modal-descricao" class="text-sm text-gray-600 max-w-lg leading-relaxed">
+                    Explore o universo de PUCmon em Realidade Aumentada.
+                </p>
+            </div>
+
+            <!-- Footer com Navegação -->
+            <div class="p-6 border-t border-gray-100 bg-white flex justify-between items-center">
+                <button onclick="mudarSlideModal(-1)" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors">
+                    ← Anterior
+                </button>
+                <span id="modal-contador" class="text-xs font-bold text-gray-400">1 / 5</span>
+                <button onclick="mudarSlideModal(1)" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-[#0055FF] hover:bg-blue-700 text-white transition-colors shadow-sm">
+                    Próximo →
+                </button>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Currículo & Habilidades -->
     <section id="curriculo" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100">
@@ -454,8 +463,77 @@
         </div>
     </footer>
 
-    <!-- Script para gerenciar filtros, expansão e mini-slides -->
+    <!-- Script para gerenciar o Modal Flutuante e Filtros -->
     <script>
+        // Dados dos slides com as imagens que você enviou
+        const slidesPucmon = [
+            {
+                tag: "Capa Oficial",
+                titulo: "PUCmon | Realidade Aumentada",
+                imagem: "Captura de Tela 2026-11-16 às 14.28.35.png",
+                descricao: "Explore, colecione e conecte-se no campus através de um jogo interativo em AR."
+            },
+            {
+                tag: "Acesso à Plataforma",
+                titulo: "Entre no Site do Jogo",
+                imagem: "image_c5a43e.png",
+                descricao: "Escaneie o QR code ou acesse diretamente em: <a href='https://pucmon.netlify.app' target='_blank' class='text-[#0055FF] font-bold underline'>pucmon.netlify.app</a>"
+            },
+            {
+                tag: "Captura de Criatura #1",
+                titulo: "Aponte e Capture o Bicho 1",
+                imagem: "image_c5a137.jpg",
+                descricao: "Abra a câmera no site e aponte para este marcador para iniciar a captura no modo AR!"
+            },
+            {
+                tag: "Captura de Criatura #2",
+                titulo: "Aponte e Capture o Bicho 2",
+                imagem: "image_c5a11c.jpg",
+                descricao: "Segundo marcador de criatura disponível para teste de captura ao vivo."
+            },
+            {
+                tag: "Captura de Criatura #3",
+                titulo: "Aponte e Capture o Bicho 3",
+                imagem: "image_c5a117.jpg",
+                descricao: "Terceiro marcador de criatura para completar sua coleção inicial de PUCmons."
+            }
+        ];
+
+        let indexSlideModal = 0;
+
+        function abrirModalPucmon() {
+            indexSlideModal = 0;
+            atualizarSlideModal();
+            const modal = document.getElementById('modal-pucmon');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function fecharModalPucmon() {
+            const modal = document.getElementById('modal-pucmon');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function mudarSlideModal(direcao) {
+            indexSlideModal += direcao;
+            if (indexSlideModal >= slidesPucmon.length) {
+                indexSlideModal = 0;
+            } else if (indexSlideModal < 0) {
+                indexSlideModal = slidesPucmon.length - 1;
+            }
+            atualizarSlideModal();
+        }
+
+        function atualizarSlideModal() {
+            const slide = slidesPucmon[indexSlideModal];
+            document.getElementById('modal-tag').textContent = slide.tag;
+            document.getElementById('modal-titulo').textContent = slide.titulo;
+            document.getElementById('modal-imagem').src = slide.imagem;
+            document.getElementById('modal-descricao').innerHTML = slide.descricao;
+            document.getElementById('modal-contador').textContent = `${indexSlideModal + 1} / ${slidesPucmon.length}`;
+        }
+
         function toggleProjeto(id, btn) {
             const el = document.getElementById(id);
             const textSpan = btn.querySelector('span');
@@ -463,67 +541,13 @@
             
             if (el.classList.contains('hidden')) {
                 el.classList.remove('hidden');
-                textSpan.textContent = 'Recolher apresentação';
+                textSpan.textContent = 'Recolher';
                 svg.style.transform = 'rotate(180deg)';
             } else {
                 el.classList.add('hidden');
-                textSpan.textContent = 'Ver apresentação';
+                textSpan.textContent = 'Ver detalhes';
                 svg.style.transform = 'rotate(0deg)';
             }
-        }
-
-        // Slides do PUCmon (Modos de Jogo + Teste ao Vivo / QR Codes)
-        const pucmonSlides = [
-            {
-                tag: "Módulo 1 de 3",
-                titulo: "Captura em Realidade Aumentada",
-                texto: "O jogador utiliza a câmera do celular em AR para localizar as criaturas no ambiente e interagir arremessando pedras até nocautear e capturar o PUCmon."
-            },
-            {
-                tag: "Módulo 2 de 3",
-                titulo: "Coleção & Sistema Tamagotchi (Níveis 0 a 5)",
-                texto: "Cuide e interaja com seus PUCmons para aumentar a afinidade/XP. Eles começam no nível 0 (afinal, você os capturou na base de pedradas). De 1 a 4 ganham novas ações, e no nível 5 desbloqueiam uma passiva única!"
-            },
-            {
-                tag: "Módulo 3 de 3",
-                titulo: "Teste agora ao vivo!",
-                texto: "Que tal testar na prática? Acesse a plataforma e aponte a câmera para os marcadores de captura para resgatar seus primeiros PUCmons!",
-                isInteractive: true
-            }
-        ];
-
-        let pucmonIndexAtual = 0;
-
-        function mudarSlidePucmon(direcao) {
-            pucmonIndexAtual += direcao;
-            
-            if (pucmonIndexAtual >= pucmonSlides.length) {
-                pucmonIndexAtual = 0;
-            } else if (pucmonIndexAtual < 0) {
-                pucmonIndexAtual = pucmonSlides.length - 1;
-            }
-
-            const slide = pucmonSlides[pucmonIndexAtual];
-            document.getElementById('pucmon-slide-titulo').textContent = slide.tag;
-            document.getElementById('pucmon-slide-heading').textContent = slide.titulo;
-            
-            const textoContainer = document.getElementById('pucmon-slide-texto');
-            
-            if (slide.isInteractive) {
-                textoContainer.innerHTML = `
-                    <p class="text-sm text-gray-600 mb-3">${slide.texto}</p>
-                    <div class="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
-                        <a href="https://pucmon.netlify.app" target="_blank" class="w-full text-center bg-[#0055FF] text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-blue-700 transition-colors shadow-sm">
-                            🌐 Acessar Site (pucmon.netlify.app)
-                        </a>
-                    </div>
-                    <p class="text-[11px] text-gray-400 text-center mt-2">Dica: Abra o site no celular e aponte para os QR codes de captura dos bichos!</p>
-                `;
-            } else {
-                textoContainer.textContent = slide.texto;
-            }
-
-            document.getElementById('pucmon-contador').textContent = `${pucmonIndexAtual + 1} / ${pucmonSlides.length}`;
         }
 
         function filtrarProjetos(categoria) {
