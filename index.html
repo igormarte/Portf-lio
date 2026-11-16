@@ -130,7 +130,7 @@
         <!-- Grid de Projetos -->
         <div id="grid-projetos" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             
-            <!-- Projeto: PUCmon (Tech & UX / Abre Modal Vertical) -->
+            <!-- Projeto: PUCmon (Tech & UX) -->
             <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="tech">
                 <div class="h-64 bg-blue-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center">
                     <img src="Captura de Tela 2026-11-16 às 14.28.35.png" alt="PUCmon Capa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -155,7 +155,7 @@
                 </div>
             </div>
 
-            <!-- Projeto: Rio Gastronomia (Publicidade / Abre Modal com as 22 Imagens) -->
+            <!-- Projeto: Rio Gastronomia (Publicidade) -->
             <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="publicidade">
                 <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
                     <img src="Captura de Tela 2026-11-13 às 17.36.28.jpg" alt="Rio Gastronomia - Sabores que contam histórias" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -345,7 +345,7 @@
         </div>
     </div>
 
-    <!-- Modal Rio Gastronomia (Gerado Automaticamente com as 22 Imagens) -->
+    <!-- Modal Rio Gastronomia (Automação das 22 imagens .png) -->
     <div id="modal-riogastronomia" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
             <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50 sticky top-0 z-10">
@@ -358,9 +358,9 @@
                 </button>
             </div>
 
-            <!-- Container Dinâmico onde as 22 imagens serão injetadas em loop -->
+            <!-- Container Dinâmico preenchido pelo script -->
             <div id="slides-container-riogastronomia" class="p-6 overflow-y-auto flex-grow space-y-8 bg-gray-50/50">
-                <!-- O JavaScript preenche aqui de 1.png até 22.png automaticamente -->
+                <!-- Injetado via script -->
             </div>
 
             <div class="p-4 border-t border-gray-100 bg-white text-center">
@@ -529,7 +529,7 @@
         </div>
     </footer>
 
-    <!-- Scripts de Modais e Automação das 22 Imagens -->
+    <!-- Scripts de Modais e Automação das 22 Imagens PNG -->
     <script>
         // Funções do Modal PUCmon
         function abrirModalPucmon() {
@@ -561,7 +561,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Injetar automaticamente as 22 imagens do Rio Gastronomia no modal ao carregar a página
+        // Injetar automaticamente as 22 imagens .png do Rio Gastronomia no modal ao carregar a página
         document.addEventListener("DOMContentLoaded", () => {
             const totalSlides = 22;
             const container = document.getElementById('slides-container-riogastronomia');
@@ -579,10 +579,19 @@
                     wrapper.className = "w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-2 border border-gray-100 p-2";
 
                     const img = document.createElement('img');
-                    img.src = `${i}.png`;
+                    img.src = `${i}.png`; // Mapeando de 1.png até 22.png
                     img.alt = `Slide ${i} - Rio Gastronomia`;
                     img.loading = "lazy";
                     img.className = "w-full h-auto object-contain max-h-[500px] rounded-lg";
+                    
+                    // Fallback caso alguma imagem não seja encontrada na pasta
+                    img.onerror = function() {
+                        this.style.display = 'none';
+                        const aviso = document.createElement('p');
+                        aviso.className = 'text-xs text-red-500 font-medium py-4';
+                        aviso.innerText = `Arquivo "${i}.png" não encontrado na mesma pasta do HTML.`;
+                        wrapper.appendChild(aviso);
+                    };
 
                     wrapper.appendChild(img);
                     card.appendChild(badge);
