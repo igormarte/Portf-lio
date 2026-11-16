@@ -565,3 +565,58 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rio Gastronomia</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+
+  <main class="max-w-4xl mx-auto">
+    <!-- Cabeçalho do Projeto -->
+    <header class="mb-10 text-center">
+      <h1 class="text-3xl font-bold tracking-tight mb-2">Rio Gastronomia</h1>
+      <p class="text-gray-500 text-sm">Apresentação e registros do projeto</p>
+    </header>
+
+    <!-- Container onde os slides serão injetados automaticamente -->
+    <section id="slides-container" class="flex flex-col gap-8">
+      <!-- O JavaScript vai carregar todas as 22 imagens aqui em sequência -->
+    </section>
+  </main>
+
+  <script>
+    // Total de slides baseado nos nomes de 1.png até 22.png
+    const totalSlides = 22;
+    const container = document.getElementById('slides-container');
+
+    for (let i = 1; i <= totalSlides; i++) {
+      // Cria o card para cada slide
+      const card = document.createElement('article');
+      card.className = "bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm p-4 sm:p-6 flex flex-col items-center";
+
+      // Cria a imagem puxando direto o nome (1.png, 2.png, etc.)
+      const img = document.createElement('img');
+      img.src = `${i}.png`;
+      img.alt = `Slide ${i} - Rio Gastronomia`;
+      img.loading = "lazy"; // Melhora a performance carregando conforme o usuário rola a página
+      img.className = "w-full h-auto rounded-lg object-contain";
+      
+      // Legenda limpa e discreta embaixo de cada imagem
+      const label = document.createElement('span');
+      label.className = "text-xs text-gray-400 mt-3 font-mono";
+      label.innerText = `[ ${i} / ${totalSlides} ]`;
+
+      // Monta a estrutura
+      card.appendChild(img);
+      card.appendChild(label);
+      container.appendChild(card);
+    }
+  </script>
+
+</body>
+</html>
