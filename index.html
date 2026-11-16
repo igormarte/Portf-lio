@@ -52,30 +52,30 @@
         </div>
     </aside>
 
-    <!-- Conteúdo Principal (Com margem esquerda no desktop para acomodar a sidebar) -->
+    <!-- Conteúdo Principal (Expandido para preencher o espaço à direita) -->
     <main class="flex-1 md:ml-72 w-full">
 
-        <!-- Hero Section -->
-        <header id="topo" class="max-w-4xl mx-auto px-8 py-20 md:py-28">
-            <h1 class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tight">
+        <!-- Hero Section (Tela Cheia / Fullscreen) -->
+        <header id="topo" class="min-h-screen flex flex-col justify-center px-8 lg:px-16 py-20">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight max-w-5xl">
                 Entre telas, sons e estratégias:
             </h1>
-            <h1 class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tight mt-4 mb-6">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mt-4 mb-8 max-w-5xl">
                 <span class="text-[#0055FF] italic">meu jeito de dar vida às ideias.</span>
             </h1>
-            <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">
+            <p class="text-lg md:text-xl text-gray-500 max-w-3xl leading-relaxed">
                 Estudante de Estudos de Mídia na PUC-Rio, unindo a publicidade, design, audiovisual e tecnologia para construir narrativas que conectam de verdade.
             </p>
         </header>
 
         <!-- Sobre Mim -->
-        <section id="sobre" class="max-w-4xl mx-auto px-8 py-16 border-t border-gray-100">
+        <section id="sobre" class="px-8 lg:px-16 py-24 border-t border-gray-100">
             <h2 class="text-3xl font-black mb-12 tracking-tight">Sobre mim</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl">
                 
                 <!-- Coluna Esquerda: Foto + Texto Bio -->
-                <div class="md:col-span-6 space-y-8">
+                <div class="lg:col-span-6 space-y-8">
                     <div class="h-[480px] bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 relative group">
                         <img src="Igor Foto.jpeg" alt="Igor Martins" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
@@ -88,7 +88,7 @@
                 </div>
                 
                 <!-- Coluna Direita: Informações em Blocos -->
-                <div class="md:col-span-6 space-y-6 pt-2">
+                <div class="lg:col-span-6 space-y-6 pt-2">
                     
                     <!-- Bloco Localização -->
                     <div class="border-b border-gray-200 pb-6">
@@ -115,10 +115,10 @@
         </section>
 
         <!-- Projetos -->
-        <section id="projetos" class="max-w-4xl mx-auto px-8 py-24 border-t border-gray-100">
+        <section id="projetos" class="px-8 lg:px-16 py-24 border-t border-gray-100">
             
             <!-- Header e Filtros -->
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
                 <h2 class="text-3xl font-black tracking-tight">Projetos Selecionados:</h2>
                 
                 <div class="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar">
@@ -337,15 +337,15 @@
         </section>
 
         <!-- Currículo & Habilidades -->
-        <section id="curriculo" class="max-w-4xl mx-auto px-8 py-24 border-t border-gray-100">
+        <section id="curriculo" class="px-8 lg:px-16 py-24 border-t border-gray-100">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
                 <h2 class="text-3xl font-black tracking-tight">Currículo & Habilidades</h2>
             </div>
 
-            <div class="grid grid-cols-1 gap-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 max-w-6xl">
                 
-                <!-- Experiência & Formação -->
-                <div class="space-y-16">
+                <!-- Coluna Esquerda: Experiência & Formação -->
+                <div class="lg:col-span-7 space-y-16">
                     
                     <!-- Experiência -->
                     <div>
@@ -405,8 +405,8 @@
 
                 </div>
 
-                <!-- Habilidades & Ferramentas & Idiomas -->
-                <div class="space-y-12">
+                <!-- Coluna Direita: Habilidades & Ferramentas -->
+                <div class="lg:col-span-5 space-y-12">
                     <div>
                         <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Habilidades & Ferramentas</h3>
                         
@@ -479,8 +479,8 @@
         </section>
 
         <!-- Footer / Contato -->
-        <footer id="contato" class="bg-gray-900 text-white py-16 px-8">
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <footer id="contato" class="bg-gray-900 text-white py-16 px-8 lg:px-16">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-8 md:mb-0 text-center md:text-left">
                     <h2 class="text-3xl font-black mb-2 tracking-tight">Vamos construir algo?</h2>
                     <p class="text-gray-400">Aberto a novas ideias e desafios.</p>
