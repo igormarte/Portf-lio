@@ -345,7 +345,7 @@
         </div>
     </div>
 
-    <!-- Modal Rio Gastronomia (Automação das 22 imagens .png) -->
+    <!-- Modal Rio Gastronomia (Automação lendo dentro da pasta RIO GASTRONOMIA) -->
     <div id="modal-riogastronomia" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
             <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50 sticky top-0 z-10">
@@ -529,7 +529,7 @@
         </div>
     </footer>
 
-    <!-- Scripts de Modais e Automação das 22 Imagens PNG -->
+    <!-- Scripts de Modais e Automação lendo a pasta RIO GASTRONOMIA -->
     <script>
         // Funções do Modal PUCmon
         function abrirModalPucmon() {
@@ -561,7 +561,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Injetar automaticamente as 22 imagens .png do Rio Gastronomia no modal ao carregar a página
+        // Injetar automaticamente as 22 imagens de dentro da pasta RIO GASTRONOMIA
         document.addEventListener("DOMContentLoaded", () => {
             const totalSlides = 22;
             const container = document.getElementById('slides-container-riogastronomia');
@@ -579,17 +579,20 @@
                     wrapper.className = "w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-2 border border-gray-100 p-2";
 
                     const img = document.createElement('img');
-                    img.src = `${i}.png`; // Mapeando de 1.png até 22.png
+                    
+                    // ⚠️ Ajustado para buscar dentro da pasta RIO GASTRONOMIA exatamente como está no seu GitHub
+                    img.src = `RIO GASTRONOMIA/${i}.png`; 
+                    
                     img.alt = `Slide ${i} - Rio Gastronomia`;
                     img.loading = "lazy";
                     img.className = "w-full h-auto object-contain max-h-[500px] rounded-lg";
                     
-                    // Fallback caso alguma imagem não seja encontrada na pasta
+                    // Fallback caso dê erro
                     img.onerror = function() {
                         this.style.display = 'none';
                         const aviso = document.createElement('p');
                         aviso.className = 'text-xs text-red-500 font-medium py-4';
-                        aviso.innerText = `Arquivo "${i}.png" não encontrado na mesma pasta do HTML.`;
+                        aviso.innerText = `Arquivo "${i}.png" não encontrado dentro da pasta RIO GASTRONOMIA.`;
                         wrapper.appendChild(aviso);
                     };
 
