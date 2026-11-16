@@ -172,7 +172,7 @@
                         
                         <div id="detalhes-riogastronomia" class="hidden space-y-3 pt-4 border-t border-gray-200 mt-4 text-sm text-gray-600">
                             <p>
-                                O projeto explorou as sinergias entre literatura e entretenimento no contexto de um grande festival gastronômico, propondo ações de ativação de marca (com a Editora ALT, da Globo Livros), experiências imersivas e narrativas voltadas para o engajamento e a atração da Geração Z.
+                                O projeto explorou as sinergias entre literatura e entretenimento no contexto de um grande festival gastronômico, proponando ações de ativação de marca (com a Editora ALT, da Globo Livros), experiências imersivas e narrativas voltadas para o engajamento e a atração da Geração Z.
                             </p>
                         </div>
                     </div>
@@ -271,6 +271,34 @@
                 </div>
             </div>
 
+            <!-- Projeto: As Crônicas de Nárnia (Audiovisual com Player Nativo) -->
+            <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="audiovisual">
+                <div class="h-80 bg-gray-900 overflow-hidden relative flex-shrink-0 flex items-center justify-center p-4">
+                    <!-- Imagem vertical da capa de Nárnia -->
+                    <img src="narnia_capa.jpg" alt="As Crônicas de Nárnia - Capítulo 1" class="h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        Audiovisual
+                    </span>
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Histórias em Áudio | Nárnia (Cap. 1)</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Narração e pós-produção do primeiro capítulo do clássico de C.S. Lewis. Um projeto imersivo de design de som e interpretação vocal desenvolvido para a disciplina de Experimentação em Mídias Sonoras, sob a orientação do professor <strong>Creso Soares</strong>.
+                        </p>
+                        
+                        <!-- Player de Áudio Nativo Integrado -->
+                        <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm mt-4">
+                            <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider block mb-2 text-center">Ouça o Capítulo Narrado</span>
+                            <audio controls class="w-full">
+                                <source src="Histórias em Áudio - Nárnia (cap.1).mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -345,7 +373,7 @@
         </div>
     </div>
 
-    <!-- Modal Rio Gastronomia (Automação lendo dentro da pasta RIO GASTRONOMIA) -->
+    <!-- Modal Rio Gastronomia -->
     <div id="modal-riogastronomia" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
             <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50 sticky top-0 z-10">
@@ -358,7 +386,6 @@
                 </button>
             </div>
 
-            <!-- Container Dinâmico preenchido pelo script -->
             <div id="slides-container-riogastronomia" class="p-6 overflow-y-auto flex-grow space-y-8 bg-gray-50/50">
                 <!-- Injetado via script -->
             </div>
@@ -529,9 +556,8 @@
         </div>
     </footer>
 
-    <!-- Scripts de Modais e Automação lendo a pasta RIO GASTRONOMIA -->
+    <!-- Scripts -->
     <script>
-        // Funções do Modal PUCmon
         function abrirModalPucmon() {
             const modal = document.getElementById('modal-pucmon');
             modal.classList.remove('hidden');
@@ -546,7 +572,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Funções do Modal Rio Gastronomia
         function abrirModalRioGastronomia() {
             const modal = document.getElementById('modal-riogastronomia');
             modal.classList.remove('hidden');
@@ -561,7 +586,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Injetar automaticamente as 22 imagens de dentro da pasta RIO GASTRONOMIA
         document.addEventListener("DOMContentLoaded", () => {
             const totalSlides = 22;
             const container = document.getElementById('slides-container-riogastronomia');
@@ -579,15 +603,11 @@
                     wrapper.className = "w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-2 border border-gray-100 p-2";
 
                     const img = document.createElement('img');
-                    
-                    // ⚠️ Ajustado para buscar dentro da pasta RIO GASTRONOMIA exatamente como está no seu GitHub
                     img.src = `RIO GASTRONOMIA/${i}.png`; 
-                    
                     img.alt = `Slide ${i} - Rio Gastronomia`;
                     img.loading = "lazy";
                     img.className = "w-full h-auto object-contain max-h-[500px] rounded-lg";
                     
-                    // Fallback caso dê erro
                     img.onerror = function() {
                         this.style.display = 'none';
                         const aviso = document.createElement('p');
@@ -604,7 +624,6 @@
             }
         });
 
-        // Função de Detalhes dos Cards
         function toggleProjeto(id, btn) {
             const el = document.getElementById(id);
             const textSpan = btn.querySelector('span');
@@ -621,7 +640,6 @@
             }
         }
 
-        // Função de Filtros
         function filtrarProjetos(categoria) {
             const cards = document.querySelectorAll('.projeto-card');
             const botoes = document.querySelectorAll('.flex.gap-2.overflow-x-auto button');
