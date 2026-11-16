@@ -343,8 +343,16 @@
 
         <!-- Currículo & Habilidades -->
         <section id="curriculo" class="px-8 lg:px-16 py-24 border-t border-gray-100">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6 max-w-6xl">
                 <h2 class="text-3xl font-black tracking-tight">Currículo & Habilidades</h2>
+            </div>
+
+            <!-- Botão de Download do Currículo -->
+            <div class="mb-16 max-w-6xl">
+                <a href="curriculo-igor.pdf" download class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl border border-gray-300 text-gray-900 font-bold text-sm hover:border-[#0055FF] hover:text-[#0055FF] hover:bg-blue-50/30 transition-all duration-300 shadow-sm">
+                    <svg class="w-4 h-4 text-[#0055FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span>BAIXAR CURRÍCULO EM PDF</span>
+                </a>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 max-w-6xl">
@@ -483,20 +491,56 @@
             </div>
         </section>
 
-        <!-- Footer / Contato -->
-        <footer id="contato" class="bg-gray-900 text-white py-16 px-8 lg:px-16">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-8 md:mb-0 text-center md:text-left">
-                    <h2 class="text-3xl font-black mb-2 tracking-tight">Vamos construir algo?</h2>
-                    <p class="text-gray-400">Aberto a novas ideias e desafios.</p>
-                </div>
-                <div class="flex gap-6">
-                    <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">LinkedIn</a>
-                    <a href="https://www.instagram.com/igormarte" target="_blank" class="hover:text-[#0055FF] transition-colors font-medium">Instagram</a>
-                    <a href="mailto:igormartinspuc@gmail.com" class="hover:text-[#0055FF] transition-colors font-medium">E-mail</a>
-                </div>
+        <!-- Contato & Rodapé (Estilo Editorial Refinado) -->
+        <section id="contato" class="px-8 lg:px-16 py-28 border-t border-gray-100 max-w-6xl">
+            <div class="mb-16">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-4">Contato</span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-2">Tem um projeto interessante?</h2>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-[#0055FF] italic">Vamos conversar.</h2>
             </div>
-        </footer>
+
+            <div class="border-t border-gray-200 divide-y divide-gray-200">
+                <!-- E-mail -->
+                <a href="mailto:igormartinspuc@gmail.com" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">E-mail</span>
+                    <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
+                        igormartinspuc@gmail.com <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
+                    </span>
+                </a>
+
+                <!-- Telefone -->
+                <a href="tel:5521991136861" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">Telefone</span>
+                    <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
+                        (21) 99113-6861 <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
+                    </span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">LinkedIn</span>
+                    <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
+                        linkedin.com/in/igor-martins-01714b388 <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
+                    </span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/igormarte" target="_blank" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">Instagram</span>
+                    <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
+                        @igormarte <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Copyright e Voltar ao topo -->
+            <div class="mt-20 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 font-medium">
+                <p>© 2026 Igor Martins</p>
+                <a href="#topo" class="hover:text-[#0055FF] transition-colors mt-4 sm:mt-0 flex items-center gap-1">
+                    Voltar ao topo ↑
+                </a>
+            </div>
+        </section>
 
     </main>
 
