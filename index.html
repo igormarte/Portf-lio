@@ -155,7 +155,7 @@
                 </div>
             </div>
 
-            <!-- Projeto: Rio Gastronomia (Publicidade) -->
+            <!-- Projeto: Rio Gastronomia (Publicidade / Abre Modal com as 22 Imagens) -->
             <div class="projeto-card bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group" data-categoria="publicidade">
                 <div class="h-64 bg-gray-200 overflow-hidden relative flex-shrink-0">
                     <img src="Captura de Tela 2026-11-13 às 17.36.28.jpg" alt="Rio Gastronomia - Sabores que contam histórias" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -177,15 +177,22 @@
                         </div>
                     </div>
                     
-                    <div class="pt-6 mt-4 border-t border-gray-200 flex items-center justify-between">
-                        <button onclick="toggleProjeto('detalhes-riogastronomia', this)" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                    <div class="pt-6 mt-4 border-t border-gray-200 flex flex-wrap items-center justify-between gap-4">
+                        <button onclick="toggleProjeto('detalhes-riogastronomia', this)" class="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#0055FF] focus:outline-none">
                             <span>Ver detalhes</span>
                             <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <a href="https://canva.link/0sshd3ului1lcl2" target="_blank" class="text-xs font-semibold text-gray-500 hover:text-[#0055FF] transition-colors flex items-center gap-1">
-                            Acessar Canva
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </a>
+                        
+                        <div class="flex items-center gap-4">
+                            <button onclick="abrirModalRioGastronomia()" class="inline-flex items-center gap-2 text-sm font-bold text-[#0055FF] hover:underline focus:outline-none">
+                                <span>Ver apresentação</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                            <a href="https://canva.link/0sshd3ului1lcl2" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-[#0055FF] transition-colors flex items-center gap-1">
+                                Canva
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -267,11 +274,9 @@
         </div>
     </section>
 
-    <!-- Modal / Mini-Página Vertical com Scroll (PUCmon) -->
+    <!-- Modal PUCmon -->
     <div id="modal-pucmon" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
-            
-            <!-- Header do Modal com Título e Botão X -->
             <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50 sticky top-0 z-10">
                 <div>
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Apresentação Interativa</span>
@@ -282,10 +287,7 @@
                 </button>
             </div>
 
-            <!-- Corpo Vertical com Rolagem (Todas as fotos e textos em sequência de cima para baixo) -->
             <div class="p-6 overflow-y-auto flex-grow space-y-12 bg-gray-50/50">
-                
-                <!-- Slide 1: Capa -->
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">01 / Capa Oficial</span>
                     <div class="w-full max-h-[350px] bg-gray-900 rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100">
@@ -295,7 +297,6 @@
                     <p class="text-sm text-gray-600 max-w-md">O universo de PUCmon em Realidade Aumentada criado para agitar o campus.</p>
                 </div>
 
-                <!-- Slide 2: QR Code do Site -->
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">02 / Acesso à Plataforma</span>
                     <div class="w-48 h-48 bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-200 p-2">
@@ -308,7 +309,6 @@
                     </a>
                 </div>
 
-                <!-- Slide 3: Captura Bicho 1 -->
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">03 / Captura de Criatura</span>
                     <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -318,7 +318,6 @@
                     <p class="text-sm text-gray-600 max-w-md">Abra a câmera no site e aponte para este marcador para iniciar a captura no modo AR.</p>
                 </div>
 
-                <!-- Slide 4: Captura Bicho 2 -->
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">04 / Captura de Criatura</span>
                     <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -328,7 +327,6 @@
                     <p class="text-sm text-gray-600 max-w-md">Segundo marcador de criatura disponível para teste de captura ao vivo.</p>
                 </div>
 
-                <!-- Slide 5: Captura Bicho 3 -->
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center">
                     <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2">05 / Captura de Criatura</span>
                     <div class="w-full max-h-[350px] bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-4 border border-gray-100 p-2">
@@ -337,16 +335,39 @@
                     <h4 class="text-lg font-bold text-gray-900 mb-1">Aponte para capturar o Bicho #3</h4>
                     <p class="text-sm text-gray-600 max-w-md">Terceiro marcador de criatura para completar sua coleção inicial de PUCmons.</p>
                 </div>
-
             </div>
 
-            <!-- Footer do Modal -->
             <div class="p-4 border-t border-gray-100 bg-white text-center">
                 <button onclick="fecharModalPucmon()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">
                     Fechar Apresentação
                 </button>
             </div>
+        </div>
+    </div>
 
+    <!-- Modal Rio Gastronomia (Gerado Automaticamente com as 22 Imagens) -->
+    <div id="modal-riogastronomia" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50 sticky top-0 z-10">
+                <div>
+                    <span class="text-xs font-bold text-[#0055FF] uppercase tracking-wider">Apresentação Completa</span>
+                    <h3 class="text-xl font-black text-gray-900 mt-0.5">Rio Gastronomia | 22 Slides</h3>
+                </div>
+                <button onclick="fecharModalRioGastronomia()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold transition-colors">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Container Dinâmico onde as 22 imagens serão injetadas em loop -->
+            <div id="slides-container-riogastronomia" class="p-6 overflow-y-auto flex-grow space-y-8 bg-gray-50/50">
+                <!-- O JavaScript preenche aqui de 1.png até 22.png automaticamente -->
+            </div>
+
+            <div class="p-4 border-t border-gray-100 bg-white text-center">
+                <button onclick="fecharModalRioGastronomia()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">
+                    Fechar Apresentação
+                </button>
+            </div>
         </div>
     </div>
 
@@ -484,6 +505,7 @@
                         <li><strong>Inglês:</strong> Avançado</li>
                         <li><strong>Espanhol:</strong> Intermediário</li>
                         <li><strong>Português:</strong> Nativo</li>
+                        <li><strong>Alemão:</strong> Intermediário</li>
                     </ul>
                 </div>
 
@@ -507,22 +529,70 @@
         </div>
     </footer>
 
-    <!-- Script para gerenciar o Modal com Scroll Vertical e Filtros -->
+    <!-- Scripts de Modais e Automação das 22 Imagens -->
     <script>
+        // Funções do Modal PUCmon
         function abrirModalPucmon() {
             const modal = document.getElementById('modal-pucmon');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            document.body.style.overflow = 'hidden'; // Trava o fundo de rolar
+            document.body.style.overflow = 'hidden';
         }
 
         function fecharModalPucmon() {
             const modal = document.getElementById('modal-pucmon');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Libera o fundo de rolar
+            document.body.style.overflow = 'auto';
         }
 
+        // Funções do Modal Rio Gastronomia
+        function abrirModalRioGastronomia() {
+            const modal = document.getElementById('modal-riogastronomia');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharModalRioGastronomia() {
+            const modal = document.getElementById('modal-riogastronomia');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Injetar automaticamente as 22 imagens do Rio Gastronomia no modal ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+            const totalSlides = 22;
+            const container = document.getElementById('slides-container-riogastronomia');
+
+            if (container) {
+                for (let i = 1; i <= totalSlides; i++) {
+                    const card = document.createElement('div');
+                    card.className = "bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center text-center";
+
+                    const badge = document.createElement('span');
+                    badge.className = "text-xs font-bold text-[#0055FF] uppercase tracking-wider mb-2";
+                    badge.innerText = `[ Slide ${i} de ${totalSlides} ]`;
+
+                    const wrapper = document.createElement('div');
+                    wrapper.className = "w-full bg-white rounded-xl overflow-hidden shadow-sm flex items-center justify-center mb-2 border border-gray-100 p-2";
+
+                    const img = document.createElement('img');
+                    img.src = `${i}.png`;
+                    img.alt = `Slide ${i} - Rio Gastronomia`;
+                    img.loading = "lazy";
+                    img.className = "w-full h-auto object-contain max-h-[500px] rounded-lg";
+
+                    wrapper.appendChild(img);
+                    card.appendChild(badge);
+                    card.appendChild(wrapper);
+                    container.appendChild(card);
+                }
+            }
+        });
+
+        // Função de Detalhes dos Cards
         function toggleProjeto(id, btn) {
             const el = document.getElementById(id);
             const textSpan = btn.querySelector('span');
@@ -539,6 +609,7 @@
             }
         }
 
+        // Função de Filtros
         function filtrarProjetos(categoria) {
             const cards = document.querySelectorAll('.projeto-card');
             const botoes = document.querySelectorAll('.flex.gap-2.overflow-x-auto button');
@@ -563,60 +634,5 @@
             });
         }
     </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rio Gastronomia</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-white text-gray-900 font-sans antialiased min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-
-  <main class="max-w-4xl mx-auto">
-    <!-- Cabeçalho do Projeto -->
-    <header class="mb-10 text-center">
-      <h1 class="text-3xl font-bold tracking-tight mb-2">Rio Gastronomia</h1>
-      <p class="text-gray-500 text-sm">Apresentação e registros do projeto</p>
-    </header>
-
-    <!-- Container onde os slides serão injetados automaticamente -->
-    <section id="slides-container" class="flex flex-col gap-8">
-      <!-- O JavaScript vai carregar todas as 22 imagens aqui em sequência -->
-    </section>
-  </main>
-
-  <script>
-    // Total de slides baseado nos nomes de 1.png até 22.png
-    const totalSlides = 22;
-    const container = document.getElementById('slides-container');
-
-    for (let i = 1; i <= totalSlides; i++) {
-      // Cria o card para cada slide
-      const card = document.createElement('article');
-      card.className = "bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm p-4 sm:p-6 flex flex-col items-center";
-
-      // Cria a imagem puxando direto o nome (1.png, 2.png, etc.)
-      const img = document.createElement('img');
-      img.src = `${i}.png`;
-      img.alt = `Slide ${i} - Rio Gastronomia`;
-      img.loading = "lazy"; // Melhora a performance carregando conforme o usuário rola a página
-      img.className = "w-full h-auto rounded-lg object-contain";
-      
-      // Legenda limpa e discreta embaixo de cada imagem
-      const label = document.createElement('span');
-      label.className = "text-xs text-gray-400 mt-3 font-mono";
-      label.innerText = `[ ${i} / ${totalSlides} ]`;
-
-      // Monta a estrutura
-      card.appendChild(img);
-      card.appendChild(label);
-      container.appendChild(card);
-    }
-  </script>
-
 </body>
 </html>
