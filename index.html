@@ -46,62 +46,93 @@
     <!-- Conteúdo Principal -->
     <main class="flex-1 w-full">
 
-        <!-- Hero Section com Mini Campo Tático Desenhado -->
-        <header id="topo" class="min-h-[90vh] flex flex-col justify-center px-8 lg:px-16 py-16">
-            <div class="max-w-4xl mx-auto w-full text-center">
+        <!-- Hero Section com Campo Tático Horizontal 4-3-3 -->
+        <header id="topo" class="min-h-[90vh] flex flex-col justify-center px-4 lg:px-16 py-16">
+            <div class="max-w-6xl mx-auto w-full text-center">
                 
-                <span class="text-xs font-bold text-[#0055FF] uppercase tracking-widest block mb-2">Prancheta Tática • Formação 2026</span>
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">
-                    Entre telas, sons e estratégias.
+                <span class="text-xs font-bold text-[#0055FF] uppercase tracking-widest block mb-2">Formação Criativa - 433</span>
+                <h1 class="text-2xl md:text-4xl font-black tracking-tight mb-8">
+                    Prancheta Tática • Posicionamento em Campo
                 </h1>
-                <p class="text-sm md:text-base text-gray-500 max-w-xl mx-auto mb-10">
-                    Estudante de Estudos de Mídia na PUC-Rio. Veja como cada habilidade se posiciona em campo para fazer o projeto acontecer:
-                </p>
 
-                <!-- MINI CAMPO TÁTICO VISUAL (Fundo Branco com marcações de campo) -->
-                <div class="relative w-full max-w-xl mx-auto h-[480px] bg-white border-2 border-dashed border-gray-300 rounded-3xl p-5 flex flex-col justify-between shadow-sm overflow-hidden">
-                    
-                    <!-- Linha do Meio do Campo -->
-                    <div class="absolute inset-x-0 top-1/2 border-t border-gray-200 -translate-y-1/2 pointer-events-none"></div>
-                    <!-- Círculo Central -->
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 border border-gray-200 rounded-full pointer-events-none"></div>
+                <!-- MINI CAMPO TÁTICO HORIZONTAL (Fundo Branco com marcações de campo) -->
+                <div class="overflow-x-auto no-scrollbar pb-4">
+                    <div class="relative min-w-[750px] w-full h-[450px] bg-white border-2 border-dashed border-gray-300 rounded-3xl p-4 shadow-sm overflow-hidden mx-auto">
+                        
+                        <!-- Linha do Meio do Campo (Vertical) -->
+                        <div class="absolute inset-y-0 left-1/2 border-l border-gray-200 -translate-x-1/2 pointer-events-none"></div>
+                        <!-- Círculo Central -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-gray-200 rounded-full pointer-events-none"></div>
 
-                    <!-- 1. ATAQUE (Topo do Campo) -->
-                    <div class="relative z-10 flex justify-center">
-                        <div class="bg-gray-900 text-white px-5 py-3 rounded-2xl shadow-md border border-gray-800 text-center w-64 hover:border-[#0055FF] transition-all">
-                            <span class="text-[10px] font-mono text-[#0055FF] font-bold block">⚽ ATAQUE</span>
-                            <h4 class="font-bold text-sm">Publicidade</h4>
-                            <p class="text-[11px] text-gray-400">Branding, Campanhas & Manô</p>
+                        <!-- Técnico no Canto do Campo -->
+                        <div class="absolute bottom-3 left-4 bg-gray-50 border border-gray-200 px-3 py-2 rounded-xl text-left z-20 shadow-sm">
+                            <span class="text-[9px] font-mono text-gray-400 block uppercase font-bold">Técnico</span>
+                            <span class="text-xs font-bold text-gray-900">Igor Martins</span>
                         </div>
-                    </div>
 
-                    <!-- 2. MEIO-CAMPO (Centro-Alto) -->
-                    <div class="relative z-10 flex justify-center">
-                        <div class="bg-gray-900 text-white px-5 py-3 rounded-2xl shadow-md border border-gray-800 text-center w-64 hover:border-[#0055FF] transition-all">
-                            <span class="text-[10px] font-mono text-[#0055FF] font-bold block">🎨 MEIO-CAMPO</span>
-                            <h4 class="font-bold text-sm">Design & UX</h4>
-                            <p class="text-[11px] text-gray-400">Interfaces, Figma & Illustrator</p>
+                        <!-- GOLEIRO (Esquerda) -->
+                        <div class="absolute top-1/2 -translate-y-1/2 z-10" style="left: 6%;">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-32 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">🧤 Goleiro</span>
+                                <h4 class="font-bold text-xs">Audiovisual</h4>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- 3. DEFESA (Centro-Baixo) -->
-                    <div class="relative z-10 flex justify-center">
-                        <div class="bg-gray-900 text-white px-5 py-3 rounded-2xl shadow-md border border-gray-800 text-center w-64 hover:border-[#0055FF] transition-all">
-                            <span class="text-[10px] font-mono text-[#0055FF] font-bold block">🛡️ DEFESA</span>
-                            <h4 class="font-bold text-sm">Tecnologia</h4>
-                            <p class="text-[11px] text-gray-400">P&D, Inovação & Petrobras</p>
+                        <!-- ZAGUEIROS (Defesa) -->
+                        <div class="absolute z-10" style="left: 26%; top: 28%; transform: translate(-50%, -50%);">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-36 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">🛡️ Zagueiro 1</span>
+                                <h4 class="font-bold text-xs">Sound Design</h4>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- 4. GOLEIRO (Base do Campo) -->
-                    <div class="relative z-10 flex justify-center">
-                        <div class="bg-gray-900 text-white px-5 py-3 rounded-2xl shadow-md border border-gray-800 text-center w-64 hover:border-[#0055FF] transition-all">
-                            <span class="text-[10px] font-mono text-[#0055FF] font-bold block">🧤 GOLEIRO</span>
-                            <h4 class="font-bold text-sm">Audiovisual</h4>
-                            <p class="text-[11px] text-gray-400">Captação, Sound Design & Reaper</p>
+                        <div class="absolute z-10" style="left: 26%; top: 72%; transform: translate(-50%, -50%);">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-36 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">🛡️ Zagueiro 2</span>
+                                <h4 class="font-bold text-xs">Comunicação Corp.</h4>
+                            </div>
                         </div>
-                    </div>
 
+                        <!-- MEIO-CAMPO (3 Jogadores) -->
+                        <div class="absolute z-10" style="left: 50%; top: 25%; transform: translate(-50%, -50%);">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-32 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">⚡ Meia</span>
+                                <h4 class="font-bold text-xs">IA</h4>
+                            </div>
+                        </div>
+                        <div class="absolute z-10" style="left: 50%; top: 50%; transform: translate(-50%, -50%);">
+                            <div class="bg-[#0055FF] text-white px-3 py-2 rounded-xl shadow-md border border-blue-400 text-center w-32 transition-all">
+                                <span class="text-[9px] font-mono text-blue-200 font-bold block">⭐ Camisa 10</span>
+                                <h4 class="font-bold text-xs">Entretenimento</h4>
+                            </div>
+                        </div>
+                        <div class="absolute z-10" style="left: 50%; top: 75%; transform: translate(-50%, -50%);">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-32 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">⚡ Meia</span>
+                                <h4 class="font-bold text-xs">Tecnologia</h4>
+                            </div>
+                        </div>
+
+                        <!-- ATAQUE (3 Jogadores) -->
+                        <div class="absolute z-10" style="left: 78%; top: 22%; transform: translate(-50%, -50%);">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-36 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">↗ Ponta Direita</span>
+                                <h4 class="font-bold text-xs">Planejamento</h4>
+                            </div>
+                        </div>
+                        <div class="absolute z-10" style="left: 78%; top: 50%; transform: translate(-50%, -50%);">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-36 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">⚽ Centroavante</span>
+                                <h4 class="font-bold text-xs">Publicidade</h4>
+                            </div>
+                        </div>
+                        <div class="absolute z-10" style="left: 78%; top: 78%; transform: translate(-50%, -50%);">
+                            <div class="bg-gray-900 text-white px-3 py-2 rounded-xl shadow-md border border-gray-800 text-center w-36 hover:border-[#0055FF] transition-all">
+                                <span class="text-[9px] font-mono text-[#0055FF] font-bold block">↙ Ponta Esquerda</span>
+                                <h4 class="font-bold text-xs">Design</h4>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -194,7 +225,7 @@
                             <div>
                                 <h3 class="text-2xl font-black mb-3 group-hover:text-[#0055FF] transition-colors">Manô | Identidade Visual & Branding</h3>
                                 <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                    Criação de identidade visual para loja de alimentação com o conceito <em>“Ingredientes orgânicos, para comer com las mãos”</em>. Desenvolvido a partir de desenhos manuais vetorizados no Adobe Illustrator, sob orientação do professor <strong>Diogo Maduell</strong>.
+                                    Criação de identidade visual para loja de alimentação com o conceito <em>“Ingredientes orgânicos, para comer com as mãos”</em>. Desenvolvido a partir de desenhos manuais vetorizados no Adobe Illustrator, sob orientação do professor <strong>Diogo Maduell</strong>.
                                 </p>
                             </div>
                             
