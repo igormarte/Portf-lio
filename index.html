@@ -19,6 +19,17 @@
         .animate-subtle-zoom {
             animation: subtleZoom 8s ease-in-out infinite;
         }
+
+        /* Gramado tático estilizado com listras suaves */
+        .pitch-grass {
+            background: repeating-linear-gradient(
+                90deg,
+                #236b43 0px,
+                #236b43 70px,
+                #1d5937 70px,
+                #1d5937 140px
+            );
+        }
     </style>
 </head>
 <body class="bg-[#FAF6EE] text-gray-900 antialiased selection:bg-[#0055FF] selection:text-white flex flex-col min-h-screen">
@@ -81,89 +92,97 @@
                     </div>
                 </div>
 
-                <!-- MINI CAMPO TÁTICO HORIZONTAL (Fundo Branco com Gols, Escanteios e Marcações) -->
+                <!-- MINI CAMPO TÁTICO HORIZONTAL (Gramado Verde Elegante com Linhas Brancas) -->
                 <div class="overflow-x-auto no-scrollbar pb-4">
-                    <div class="relative min-w-[840px] w-full max-w-[840px] h-[480px] bg-white border-2 border-gray-300 rounded-3xl p-4 shadow-sm overflow-hidden mx-auto">
+                    <div class="pitch-grass relative min-w-[840px] w-full max-w-[840px] h-[480px] rounded-3xl p-4 shadow-xl border-4 border-white/80 overflow-hidden mx-auto">
                         
                         <!-- Cantos dos Escanteios (Arquinhos nas 4 pontas) -->
-                        <div class="absolute top-0 left-0 w-8 h-8 border-b-2 border-r-2 border-gray-300 rounded-br-full pointer-events-none"></div>
-                        <div class="absolute bottom-0 left-0 w-8 h-8 border-t-2 border-r-2 border-gray-300 rounded-tr-full pointer-events-none"></div>
-                        <div class="absolute top-0 right-0 w-8 h-8 border-b-2 border-l-2 border-gray-300 rounded-bl-full pointer-events-none"></div>
-                        <div class="absolute bottom-0 right-0 w-8 h-8 border-t-2 border-l-2 border-gray-300 rounded-tl-full pointer-events-none"></div>
+                        <div class="absolute top-0 left-0 w-8 h-8 border-b-2 border-r-2 border-white/60 rounded-br-full pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 w-8 h-8 border-t-2 border-r-2 border-white/60 rounded-tr-full pointer-events-none"></div>
+                        <div class="absolute top-0 right-0 w-8 h-8 border-b-2 border-l-2 border-white/60 rounded-bl-full pointer-events-none"></div>
+                        <div class="absolute bottom-0 right-0 w-8 h-8 border-t-2 border-l-2 border-white/60 rounded-tl-full pointer-events-none"></div>
 
                         <!-- Gols (Esquerda e Direita) -->
-                        <div class="absolute top-1/2 -translate-y-1/2 left-0 w-6 h-28 border-r-2 border-y-2 border-gray-300 rounded-r-2xl pointer-events-none"></div>
-                        <div class="absolute top-1/2 -translate-y-1/2 right-0 w-6 h-28 border-l-2 border-y-2 border-gray-300 rounded-l-2xl pointer-events-none"></div>
+                        <div class="absolute top-1/2 -translate-y-1/2 left-0 w-6 h-28 border-r-2 border-y-2 border-white/60 rounded-r-2xl pointer-events-none bg-white/5"></div>
+                        <div class="absolute top-1/2 -translate-y-1/2 right-0 w-6 h-28 border-l-2 border-y-2 border-white/60 rounded-l-2xl pointer-events-none bg-white/5"></div>
 
                         <!-- Linha do Meio do Campo (Vertical) -->
-                        <div class="absolute inset-y-0 left-1/2 border-l border-gray-200 -translate-x-1/2 pointer-events-none"></div>
+                        <div class="absolute inset-y-0 left-1/2 border-l-2 border-white/50 -translate-x-1/2 pointer-events-none"></div>
                         <!-- Círculo Central -->
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-gray-200 rounded-full pointer-events-none"></div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-2 border-white/50 rounded-full pointer-events-none"></div>
 
                         <!-- Técnico no Canto do Campo -->
-                        <div class="absolute bottom-4 left-4 bg-white border border-gray-200 px-4 py-2.5 rounded-2xl text-left z-20 shadow-sm">
-                            <span class="text-[9px] font-mono text-gray-800 block uppercase font-bold">Técnico</span>
+                        <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md border border-white px-4 py-2.5 rounded-2xl text-left z-20 shadow-md">
+                            <span class="text-[9px] font-mono text-gray-700 block uppercase font-bold">Técnico</span>
                             <span class="text-xs font-bold text-gray-900">Igor Martins</span>
                         </div>
 
-                        <!-- GOLEIRO (Esquerda) -->
+                        <!-- GOLEIRO (Esquerda -> Audiovisual) -->
                         <div class="absolute top-1/2 -translate-y-1/2 z-10" style="left: 8%;">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-36 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">🧤</span>
+                            <div onclick="irParaProjetos('audiovisual')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-36 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">🧤</span>
                                 <h4 class="font-bold text-xs md:text-sm">Audiovisual</h4>
                             </div>
                         </div>
 
                         <!-- ZAGUEIROS (Defesa) -->
+                        <!-- Sound Design -> Audiovisual -->
                         <div class="absolute z-10" style="left: 28%; top: 28%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-38 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">🎧</span>
+                            <div onclick="irParaProjetos('audiovisual')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-38 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">🎧</span>
                                 <h4 class="font-bold text-xs md:text-sm">Sound Design</h4>
                             </div>
                         </div>
+                        <!-- Comunicação -> Todos os Projetos -->
                         <div class="absolute z-10" style="left: 28%; top: 72%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-38 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">📢</span>
+                            <div onclick="irParaProjetos('todos')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-38 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">📢</span>
                                 <h4 class="font-bold text-xs md:text-sm">Comunicação</h4>
                             </div>
                         </div>
 
-                        <!-- MEIO-CAMPO (3 Jogadores - Camisa 10 deslocado levemente para a direita) -->
+                        <!-- MEIO-CAMPO (3 Jogadores) -->
+                        <!-- IA -> Tech & UX -->
                         <div class="absolute z-10" style="left: 50%; top: 25%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-32 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">🤖</span>
+                            <div onclick="irParaProjetos('tech')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-32 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">🤖</span>
                                 <h4 class="font-bold text-xs md:text-sm">IA</h4>
                             </div>
                         </div>
+                        <!-- Entretenimento -> Publicidade -->
                         <div class="absolute z-10" style="left: 55%; top: 50%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-38 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">⭐</span>
+                            <div onclick="irParaProjetos('publicidade')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-38 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">⭐</span>
                                 <h4 class="font-bold text-xs md:text-sm">Entretenimento</h4>
                             </div>
                         </div>
+                        <!-- Tecnologia -> Tech & UX -->
                         <div class="absolute z-10" style="left: 50%; top: 75%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-32 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">🤖</span>
+                            <div onclick="irParaProjetos('tech')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-32 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">💡</span>
                                 <h4 class="font-bold text-xs md:text-sm">Tecnologia</h4>
                             </div>
                         </div>
 
-                        <!-- ATAQUE (3 Jogadores - Publicidade mais à direita) -->
+                        <!-- ATAQUE (3 Jogadores) -->
+                        <!-- Planejamento -> Publicidade -->
                         <div class="absolute z-10" style="left: 80%; top: 22%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-38 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">🎨</span>
+                            <div onclick="irParaProjetos('publicidade')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-38 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">📊</span>
                                 <h4 class="font-bold text-xs md:text-sm">Planejamento</h4>
                             </div>
                         </div>
+                        <!-- Publicidade -> Publicidade -->
                         <div class="absolute z-10" style="left: 83%; top: 50%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-38 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">⚽</span>
+                            <div onclick="irParaProjetos('publicidade')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-38 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">⚽</span>
                                 <h4 class="font-bold text-xs md:text-sm">Publicidade</h4>
                             </div>
                         </div>
+                        <!-- Design -> Tech & UX -->
                         <div class="absolute z-10" style="left: 80%; top: 78%; transform: translate(-50%, -50%);">
-                            <div class="bg-white text-gray-900 px-4 py-3 rounded-2xl shadow-sm border border-gray-200 text-center w-38 hover:border-[#0055FF] transition-all">
-                                <span class="text-xl block mb-1">🎨</span>
+                            <div onclick="irParaProjetos('tech')" class="bg-white/95 text-gray-900 px-4 py-3 rounded-2xl shadow-md border border-white text-center w-38 hover:scale-105 hover:bg-white hover:ring-2 hover:ring-[#0055FF] transition-all cursor-pointer group">
+                                <span class="text-xl block mb-1 group-hover:scale-110 transition-transform">🎨</span>
                                 <h4 class="font-bold text-xs md:text-sm">Design</h4>
                             </div>
                         </div>
@@ -184,7 +203,6 @@
                     <!-- Coluna Esquerda: Foto + Texto Bio -->
                     <div class="lg:col-span-6 space-y-8">
                         <div class="h-[480px] bg-white rounded-3xl overflow-hidden border border-gray-200 relative group shadow-sm">
-                            <!-- Foto com zoom suave e nome de arquivo facilitado (foto-perfil.jpeg) -->
                             <img src="foto-perfil.jpeg" alt="Igor Martins" class="w-full h-full object-cover animate-subtle-zoom">
                         </div>
                         
@@ -797,6 +815,14 @@
 
     <!-- Scripts -->
     <script>
+        function irParaProjetos(categoria) {
+            filtrarProjetos(categoria);
+            const el = document.getElementById('projetos');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
         function abrirModalMano() {
             const modal = document.getElementById('modal-mano');
             modal.classList.remove('hidden'); modal.classList.add('flex');
@@ -877,7 +903,7 @@
 
         function filtrarProjetos(categoria) {
             const cards = document.querySelectorAll('.projeto-card');
-            const botoes = document.querySelectorAll('.flex.gap-2.overflow-x-auto button');
+            const botoes = document.querySelectorAll('#projetos button[id^="btn-"]');
             botoes.forEach(btn => {
                 btn.classList.remove('bg-[#0055FF]', 'text-white');
                 btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-200');
