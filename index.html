@@ -11,6 +11,14 @@
         .font-editorial { font-family: 'Playfair Display', serif; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes subtleZoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .animate-subtle-zoom {
+            animation: subtleZoom 8s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900 antialiased selection:bg-[#0055FF] selection:text-white flex flex-col min-h-screen">
@@ -20,24 +28,24 @@
         <!-- Logo / Nome -->
         <a href="#topo" class="block">
             <span class="font-editorial italic font-semibold text-xl tracking-tight block">Igor Martins</span>
-            <span class="text-[10px] text-gray-400 uppercase tracking-widest block font-medium">Estudos de Mídia</span>
+            <span class="text-[10px] text-gray-800 uppercase tracking-widest block font-bold">Estudos de Mídia</span>
         </a>
 
         <!-- Links de Navegação ao Centro -->
         <div class="hidden md:flex items-center gap-8">
             <a href="#topo" class="text-xs font-bold tracking-widest text-gray-900 uppercase hover:text-[#0055FF] transition-colors">Início</a>
-            <a href="#sobre" class="text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Sobre mim</a>
-            <a href="#projetos" class="text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Projetos</a>
-            <a href="#curriculo" class="text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Currículo</a>
-            <a href="#contato" class="text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Contato</a>
+            <a href="#sobre" class="text-xs font-bold tracking-widest text-gray-800 uppercase hover:text-[#0055FF] transition-colors">Sobre mim</a>
+            <a href="#projetos" class="text-xs font-bold tracking-widest text-gray-800 uppercase hover:text-[#0055FF] transition-colors">Projetos</a>
+            <a href="#curriculo" class="text-xs font-bold tracking-widest text-gray-800 uppercase hover:text-[#0055FF] transition-colors">Currículo</a>
+            <a href="#contato" class="text-xs font-bold tracking-widest text-gray-800 uppercase hover:text-[#0055FF] transition-colors">Contato</a>
         </div>
 
         <!-- Links Sociais no Superior Direito -->
         <div class="hidden lg:flex items-center gap-6 border-l border-gray-200 pl-6">
-            <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors">
+            <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="text-xs font-semibold text-gray-700 hover:text-[#0055FF] transition-colors">
                 LinkedIn ↗
             </a>
-            <a href="https://www.instagram.com/igormarte" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors">
+            <a href="https://www.instagram.com/igormarte" target="_blank" class="text-xs font-semibold text-gray-700 hover:text-[#0055FF] transition-colors">
                 Instagram ↗
             </a>
         </div>
@@ -48,15 +56,24 @@
 
         <!-- Hero Section com Campo Tático Horizontal 4-3-3 Refinado -->
         <header id="topo" class="min-h-[90vh] flex flex-col justify-center px-4 lg:px-16 py-16">
-            <div class="max-w-6xl mx-auto w-full text-center">
+            <div class="max-w-6xl mx-auto w-full">
                 
-                <div class="mb-10">
+                <!-- Títulos Centrados -->
+                <div class="mb-8 text-center">
                     <h1 class="text-3xl md:text-5xl font-black tracking-tight text-gray-900 mb-3">
                         Igor Martins FC
                     </h1>
                     <span class="text-sm md:text-base font-bold text-[#0055FF] uppercase tracking-widest block">
                         Formação Criativa - 433
                     </span>
+                </div>
+
+                <!-- Botão Ver Projetos (Alinhado à direita, acima do campo perto do escanteio) -->
+                <div class="max-w-[780px] mx-auto flex justify-end mb-3 px-2">
+                    <a href="#projetos" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-900 bg-white border border-gray-300 px-4 py-2.5 rounded-xl hover:bg-[#0055FF] hover:text-white hover:border-[#0055FF] transition-all shadow-sm">
+                        <span>Ver Projetos</span>
+                        <span>↓</span>
+                    </a>
                 </div>
 
                 <!-- MINI CAMPO TÁTICO HORIZONTAL (Fundo Branco com Gols, Escanteios e Marcações) -->
@@ -80,7 +97,7 @@
 
                         <!-- Técnico no Canto do Campo -->
                         <div class="absolute bottom-4 left-4 bg-white border border-gray-200 px-4 py-2.5 rounded-2xl text-left z-20 shadow-sm">
-                            <span class="text-[9px] font-mono text-gray-400 block uppercase font-bold">Técnico</span>
+                            <span class="text-[9px] font-mono text-gray-800 block uppercase font-bold">Técnico</span>
                             <span class="text-xs font-bold text-gray-900">Igor Martins</span>
                         </div>
 
@@ -162,7 +179,8 @@
                     <!-- Coluna Esquerda: Foto + Texto Bio -->
                     <div class="lg:col-span-6 space-y-8">
                         <div class="h-[480px] bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 relative group">
-                            <img src="Igor Foto.jpeg" alt="Igor Martins" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                            <!-- Foto com zoom suave e nome de arquivo facilitado (foto-perfil.jpeg) -->
+                            <img src="foto-perfil.jpeg" alt="Igor Martins" class="w-full h-full object-cover animate-subtle-zoom">
                         </div>
                         
                         <div class="space-y-4 text-gray-600 text-base leading-relaxed">
@@ -177,13 +195,13 @@
                         
                         <!-- Bloco Localização -->
                         <div class="border-b border-gray-200 pb-6">
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">Localização</span>
+                            <span class="text-xs font-bold text-gray-800 uppercase tracking-widest block mb-1">Localização</span>
                             <p class="text-gray-900 font-medium">Rio de Janeiro, Brasil</p>
                         </div>
 
                         <!-- Bloco Especialidades -->
                         <div class="border-b border-gray-200 pb-6">
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-2">Especialidades</span>
+                            <span class="text-xs font-bold text-gray-800 uppercase tracking-widest block mb-2">Especialidades</span>
                             <p class="text-gray-800 text-sm leading-relaxed">
                                 Direção de Arte & Branding • Estratégia de Conteúdo • UX/UI & Web Design • Produção Audiovisual & Sound Design • Inovação Digital & P&D
                             </p>
@@ -191,7 +209,7 @@
 
                         <!-- Bloco Idiomas -->
                         <div class="border-b border-gray-200 pb-6">
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">Idiomas</span>
+                            <span class="text-xs font-bold text-gray-800 uppercase tracking-widest block mb-1">Idiomas</span>
                             <p class="text-gray-900 font-medium">Português • Inglês • Espanhol</p>
                         </div>
 
@@ -310,7 +328,7 @@
                                         <span>Ver apresentação</span>
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                     </button>
-                                    <a href="https://canva.link/0sshd3ului1lcl2" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-[#0055FF] transition-colors flex items-center gap-1">
+                                    <a href="https://canva.link/0sshd3ului1lcl2" target="_blank" class="text-xs font-semibold text-gray-700 hover:text-[#0055FF] transition-colors flex items-center gap-1">
                                         Canva
                                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                     </a>
@@ -446,7 +464,7 @@
                         
                         <!-- Experiência -->
                         <div>
-                            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Experiência Profissional</h3>
+                            <h3 class="text-xs font-bold tracking-widest text-gray-800 uppercase mb-8">Experiência Profissional</h3>
                             <div class="space-y-12">
                                 
                                 <!-- Item 1: Ignição Petrobras -->
@@ -454,7 +472,7 @@
                                     <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#0055FF]"></div>
                                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                         <h4 class="text-lg font-bold">Estágio | Programa Ignição Petrobras</h4>
-                                        <span class="text-sm font-medium text-gray-400">Mar 2026 – Atual</span>
+                                        <span class="text-sm font-semibold text-gray-700">Mar 2026 – Atual</span>
                                     </div>
                                     <p class="text-sm font-semibold text-[#0055FF] mb-3">Instituto ECOA PUC-Rio</p>
                                     <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside">
@@ -470,7 +488,7 @@
                                     <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-300"></div>
                                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                         <h4 class="text-lg font-bold">Estagiário Técnico</h4>
-                                        <span class="text-sm font-medium text-gray-400">Fev 2025 – Fev 2026</span>
+                                        <span class="text-sm font-semibold text-gray-700">Fev 2025 – Fev 2026</span>
                                     </div>
                                     <p class="text-sm font-semibold text-[#0055FF] mb-3">PUC-Rio LABCOM (Estúdios de Áudio e TV)</p>
                                     <ul class="space-y-2 text-sm text-gray-600 list-disc list-inside">
@@ -486,16 +504,16 @@
 
                         <!-- Formação -->
                         <div>
-                            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Formação</h3>
+                            <h3 class="text-xs font-bold tracking-widest text-gray-800 uppercase mb-8">Formação</h3>
                             <div class="space-y-8">
                                 <div class="border-l-2 border-gray-200 pl-6 relative">
                                     <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#0055FF]"></div>
                                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
                                         <h4 class="text-lg font-bold">Bacharelado em Estudos de Mídia</h4>
-                                        <span class="text-sm font-medium text-gray-400">2024 – 2028</span>
+                                        <span class="text-sm font-semibold text-gray-700">2024 – 2028</span>
                                     </div>
                                     <p class="text-sm font-semibold text-[#0055FF]">PUC-Rio</p>
-                                    <p class="text-xs text-gray-500 mt-1">Ênfase em Publicidade e Comunicação Corporativa & Comunicação e Tecnologia.</p>
+                                    <p class="text-xs text-gray-700 font-medium mt-1">Ênfase em Publicidade e Comunicação Corporativa & Comunicação e Tecnologia.</p>
                                 </div>
                             </div>
                         </div>
@@ -505,7 +523,7 @@
                     <!-- Coluna Direita: Habilidades & Ferramentas -->
                     <div class="lg:col-span-5 space-y-12">
                         <div>
-                            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Habilidades & Ferramentas</h3>
+                            <h3 class="text-xs font-bold tracking-widest text-gray-800 uppercase mb-8">Habilidades & Ferramentas</h3>
                             
                             <div class="space-y-6">
                                 <div>
@@ -572,8 +590,8 @@
 
                         <!-- Idiomas -->
                         <div>
-                            <h3 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-4">Idiomas</h3>
-                            <ul class="space-y-2 text-sm text-gray-600">
+                            <h3 class="text-xs font-bold tracking-widest text-gray-800 uppercase mb-4">Idiomas</h3>
+                            <ul class="space-y-2 text-sm text-gray-700 font-medium">
                                 <li>Português</li>
                                 <li>Inglês</li>
                                 <li>Espanhol</li>
@@ -590,7 +608,7 @@
         <section id="contato" class="px-8 lg:px-16 py-28 border-t border-gray-100">
             <div class="max-w-5xl mx-auto">
                 <div class="mb-16">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-4">Contato</span>
+                    <span class="text-xs font-bold text-gray-800 uppercase tracking-widest block mb-4">Contato</span>
                     <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-2">Tem um projeto interessante?</h2>
                     <h2 class="text-4xl md:text-5xl font-black tracking-tight text-[#0055FF] italic">Vamos conversar.</h2>
                 </div>
@@ -598,7 +616,7 @@
                 <div class="border-t border-gray-200 divide-y divide-gray-200">
                     <!-- E-mail -->
                     <a href="mailto:igormartinspuc@gmail.com" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">E-mail</span>
+                        <span class="text-xs font-bold text-gray-800 uppercase tracking-widest mb-1 sm:mb-0">E-mail</span>
                         <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
                             igormartinspuc@gmail.com <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
                         </span>
@@ -606,7 +624,7 @@
 
                     <!-- Telefone -->
                     <a href="tel:5521991136861" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">Telefone</span>
+                        <span class="text-xs font-bold text-gray-800 uppercase tracking-widest mb-1 sm:mb-0">Telefone</span>
                         <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
                             (21) 99113-6861 <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
                         </span>
@@ -614,7 +632,7 @@
 
                     <!-- LinkedIn -->
                     <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">LinkedIn</span>
+                        <span class="text-xs font-bold text-gray-800 uppercase tracking-widest mb-1 sm:mb-0">LinkedIn</span>
                         <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
                             linkedin.com/in/igor-martins-01714b388 <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
                         </span>
@@ -622,7 +640,7 @@
 
                     <!-- Instagram -->
                     <a href="https://www.instagram.com/igormarte" target="_blank" class="py-6 flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-gray-50/50 transition-colors px-4 rounded-xl">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 sm:mb-0">Instagram</span>
+                        <span class="text-xs font-bold text-gray-800 uppercase tracking-widest mb-1 sm:mb-0">Instagram</span>
                         <span class="text-base font-medium text-gray-900 group-hover:text-[#0055FF] transition-colors flex items-center gap-2">
                             @igormarte <span class="text-gray-400 group-hover:text-[#0055FF]">↗</span>
                         </span>
@@ -630,7 +648,7 @@
                 </div>
 
                 <!-- Copyright e Voltar ao topo -->
-                <div class="mt-20 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 font-medium">
+                <div class="mt-20 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-700 font-semibold">
                     <p>© 2026 Igor Martins</p>
                     <a href="#topo" class="hover:text-[#0055FF] transition-colors mt-4 sm:mt-0 flex items-center gap-1">
                         Voltar ao topo ↑
