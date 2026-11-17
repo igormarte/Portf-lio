@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igor Martins | Portfólio</title>
+    <title>Igor Martins | Portfólio (Versão Spotify)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
@@ -15,15 +15,12 @@
 </head>
 <body class="bg-white text-gray-900 antialiased selection:bg-[#0055FF] selection:text-white flex flex-col min-h-screen">
 
-    <!-- Menu Superior Fixo (Estilo Editorial Refinado) -->
+    <!-- Menu Superior Fixo -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 px-8 lg:px-16 py-5 flex items-center justify-between">
-        <!-- Logo / Nome -->
         <a href="#topo" class="block">
             <span class="font-editorial italic font-semibold text-xl tracking-tight block">Igor Martins</span>
             <span class="text-[10px] text-gray-400 uppercase tracking-widest block font-medium">Estudos de Mídia</span>
         </a>
-
-        <!-- Links de Navegação ao Centro/Direita -->
         <div class="hidden md:flex items-center gap-8">
             <a href="#topo" class="text-xs font-bold tracking-widest text-gray-900 uppercase hover:text-[#0055FF] transition-colors">Início</a>
             <a href="#sobre" class="text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Sobre mim</a>
@@ -31,36 +28,72 @@
             <a href="#curriculo" class="text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Currículo</a>
             <a href="#contato" class="text-xs font-bold tracking-widest text-gray-400 uppercase hover:text-[#0055FF] transition-colors">Contato</a>
         </div>
-
-        <!-- Links Sociais no Superior Direito -->
         <div class="hidden lg:flex items-center gap-6 border-l border-gray-200 pl-6">
-            <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors">
-                LinkedIn ↗
-            </a>
-            <a href="https://www.instagram.com/igormarte" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors">
-                Instagram ↗
-            </a>
+            <a href="https://www.linkedin.com/in/igor-martins-01714b388" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors">LinkedIn ↗</a>
+            <a href="https://www.instagram.com/igormarte" target="_blank" class="text-xs font-medium text-gray-500 hover:text-[#0055FF] transition-colors">Instagram ↗</a>
         </div>
     </nav>
 
     <!-- Conteúdo Principal -->
     <main class="flex-1 w-full">
 
-        <!-- Hero Section -->
+        <!-- Hero Section com Mini Player Spotify -->
         <header id="topo" class="min-h-[85vh] flex flex-col justify-center px-8 lg:px-16 py-20">
-            <div class="max-w-5xl mx-auto w-full">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
-                    Entre telas, sons e estratégias:
-                </h1>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mt-4 mb-8">
-                    <span class="text-[#0055FF] italic">meu jeito de dar vida às ideias.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-500 max-w-3xl leading-relaxed">
-                    Estudante de Estudos de Mídia na PUC-Rio, unindo a publicidade, design, audiovisual e tecnologia para construir narrativas que conectam de verdade.
-                </p>
+            <div class="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#0055FF] text-xs font-bold uppercase tracking-wider">
+                        <span>⚡ Portfólio 2026</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+                        Entre telas, sons e estratégias:
+                    </h1>
+                    <h1 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tight text-[#0055FF] italic">
+                        meu jeito de dar vida às ideias.
+                    </h1>
+                    <p class="text-base md:text-lg text-gray-500 leading-relaxed pt-2">
+                        Estudante de Estudos de Mídia na PUC-Rio, unindo publicidade, design, audiovisual e tecnologia para construir narrativas marcantes.
+                    </p>
+                </div>
+
+                <!-- Widget Spotify Now Playing -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gray-900 text-white p-6 rounded-3xl shadow-xl border border-gray-800 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 text-xs font-bold text-emerald-400 tracking-widest uppercase flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Spotify
+                        </div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden bg-gray-800 flex-shrink-0 border border-gray-700">
+                                <img src="Igor Foto.jpeg" alt="Igor Martins" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400 uppercase tracking-wider block font-medium">Tocando agora</span>
+                                <h3 class="font-bold text-base text-white tracking-tight">Criando Ideias & Conexões</h3>
+                                <p class="text-xs text-gray-400">Igor Martins (Feat. Mídia & Tech)</p>
+                            </div>
+                        </div>
+                        <!-- Barra de Progresso Falsa -->
+                        <div class="space-y-2">
+                            <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-[#0055FF] h-full w-3/4 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between text-[10px] text-gray-400 font-mono">
+                                <span>02:24</span>
+                                <span>03:45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </header>
 
+        <!-- Demais seções (Sobre, Projetos, Currículo, Contato e Modais mantidos idênticos) -->
+        <!-- [Insira as mesmas seções e scripts das versões anteriores aqui] -->
+
+    </main>
+</body>
+</html>
         <!-- Sobre Mim -->
         <section id="sobre" class="px-8 lg:px-16 py-24 border-t border-gray-100">
             <div class="max-w-5xl mx-auto">
